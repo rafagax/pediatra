@@ -1,4 +1,6 @@
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
 
 const steps = [
   {
@@ -24,13 +26,16 @@ const steps = [
 ]
 
 export function ProcessSection() {
+  const whatsappUrl =
+    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
+
   return (
     <section id="proceso" className="py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           {/* Left: Image + stats overlay */}
           <div className="relative">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-muted shadow-xl shadow-primary/10 ring-1 ring-border lg:sticky lg:top-28">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-muted shadow-xl shadow-primary/10 ring-1 ring-border">
               <Image
                 src="/images/doctora-2.png"
                 alt="Doctora atendiendo con cercanía a paciente pediátrica en consulta"
@@ -93,6 +98,19 @@ export function ProcessSection() {
                 )
               })}
             </ol>
+
+            <div className="mt-10 flex justify-center lg:justify-start">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-primary px-8 text-base text-primary-foreground hover:bg-primary/90"
+              >
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Agendar cita ahora
+                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
