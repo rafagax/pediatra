@@ -47,13 +47,16 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        <ul className="mt-14 grid gap-6 md:grid-cols-3">
+        {/* CONTENEDOR MODIFICADO: Flex/Snap en móvil, Grid en MD y mayores */}
+        <ul className="mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-8 md:grid md:grid-cols-3 md:overflow-visible md:pb-0 md:snap-none">
           {testimonials.map((t, idx) => (
             <li
               key={t.name}
               className={[
+                /* TARJETA MODIFICADA: Ancho fijo en móvil, auto en desktop */
+                "w-[85vw] shrink-0 snap-center md:w-auto md:shrink md:snap-align-none",
                 "soft-card relative flex flex-col rounded-2xl border border-border bg-card p-7 shadow-sm hover:shadow-lg hover:shadow-primary/5",
-                idx === 1 ? "md:translate-y-4" : "",
+                idx === 1 ? "md:translate-y-4" : "", // Mantiene el efecto de la tarjeta central en escritorio
               ].join(" ")}
             >
               <div className="flex items-center justify-between text-xs text-muted-foreground">
