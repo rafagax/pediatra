@@ -31,6 +31,29 @@ export const metadata: Metadata = {
     "estreñimiento infantil maracay",
     "dra katherine ainslie",
   ],
+  openGraph: {
+    title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo en Maracay",
+    description:
+      "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento y dolor abdominal.",
+    url: "https://drakatherineainslie.com", // Adjust if domain is known, otherwise relative works for some scrapers but full URL is better.
+    siteName: "Dra. Katherine Ainslie",
+    images: [
+      {
+        url: "/images/portada-katherine.png",
+        width: 1200,
+        height: 630,
+        alt: "Dra. Katherine Ainslie - Pediatra Gastroenterólogo",
+      },
+    ],
+    locale: "es_VE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo",
+    description: "Atención integral para la salud digestiva de tus hijos en Maracay.",
+    images: ["/images/portada-katherine.png"],
+  },
 }
 
 export default function RootLayout({
