@@ -99,11 +99,11 @@ export function ProcessSection() {
               })}
             </ol>
 
-            <div className="mt-10 flex justify-center lg:justify-start">
+            <div className="mt-10 flex justify-center">
               <Button
                 asChild
                 size="lg"
-                className="rounded-full bg-primary px-8 text-base text-primary-foreground hover:bg-primary/90"
+                className="h-14 rounded-full bg-primary px-8 text-lg font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
               >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   Agendar cita ahora

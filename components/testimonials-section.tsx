@@ -60,9 +60,9 @@ export function TestimonialsSection() {
     return () => cancelAnimationFrame(animationFrameId)
   }, [isInteracting])
 
-  const renderCard = (t, idx, isDesktop) => (
+  const renderCard = (t, idx, isDesktop, setIdx = 0) => (
     <li
-      key={`${t.name}-${isDesktop ? 'desktop' : 'mobile'}-${idx}`}
+      key={`${t.name}-${isDesktop ? 'desktop' : 'mobile'}-${setIdx}-${idx}`}
       className={[
         "soft-card relative flex flex-col rounded-2xl border border-border bg-card p-7 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-shadow",
         isDesktop ? "w-auto" : "w-[300px] shrink-0",
@@ -104,7 +104,7 @@ export function TestimonialsSection() {
     <section id="testimonios" className="border-t border-border bg-secondary/40 py-12 sm:py-16 overflow-hidden">
 
       {/* Ocultamos la barra de scroll nativa en todos los navegadores */}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
         }
@@ -112,7 +112,7 @@ export function TestimonialsSection() {
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
-      `}</style>
+      `}} />
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
@@ -143,8 +143,8 @@ export function TestimonialsSection() {
         >
           <div className="flex w-max gap-6 pr-6 py-4">
             {/* Renderizamos DOS VECES la lista para la ilusión de infinito */}
-            {testimonials.map((t, idx) => renderCard(t, idx, false))}
-            {testimonials.map((t, idx) => renderCard(t, idx, false))}
+            {testimonials.map((t, idx) => renderCard(t, idx, false, 1))}
+            {testimonials.map((t, idx) => renderCard(t, idx, false, 2))}
           </div>
         </div>
 

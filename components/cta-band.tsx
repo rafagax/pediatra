@@ -41,11 +41,11 @@ export function CtaBand() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full bg-primary px-7 text-base text-primary-foreground hover:bg-primary/90"
+                className="h-14 rounded-full bg-primary px-8 text-lg font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
               >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  Agendar cita
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  Agendar cita ahora
+                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </a>
               </Button>
               <Button
