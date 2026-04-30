@@ -2,17 +2,51 @@ import { ArrowUpRight } from "lucide-react"
 
 const services = [
   {
-    title: "Pediatría General",
-    description:
-      "Control del niño sano, evaluación integral y seguimiento del crecimiento con atención cercana para el bienestar de tus pequeños.",
-    tag: "Consulta pediátrica",
+    title: "Consulta Pediátrica",
+    description: "Atención especializada, control de niño sano, evaluación nutricional y esquematización de vacunas.",
+    tag: "Pediatría Integral",
     featured: false,
   },
   {
-    title: "Gastroenterología Pediátrica",
-    description:
-      "Diagnóstico y tratamiento especializado de enfermedades del sistema digestivo, hígado y nutrición en niños y adolescentes.",
-    tag: "Subespecialidad pediátrica",
+    title: "Reflujo Gastroesofágico",
+    description: "Diagnóstico preciso y tratamiento avanzado para episodios de reflujo y acidez en niños.",
+    tag: "Gastroenterología",
+    featured: false,
+  },
+  {
+    title: "Manejo del Estreñimiento",
+    description: "Evaluación detallada y plan de manejo efectivo del estreñimiento infantil.",
+    tag: "Gastroenterología",
+    featured: false,
+  },
+  {
+    title: "Dolor Abdominal",
+    description: "Evaluación exhaustiva para determinar y tratar las causas del dolor abdominal recurrente.",
+    tag: "Patologías Digestivas",
+    featured: false,
+  },
+  {
+    title: "Alergias e Intolerancias",
+    description: "Detección y abordaje de alergias alimentarias y enfermedad celíaca con enfoque nutricional.",
+    tag: "Nutrición Pediátrica",
+    featured: false,
+  },
+  {
+    title: "Control de H. Pylori",
+    description: "Diagnóstico y tratamiento oportuno para erradicar la infección por Helicobacter pylori.",
+    tag: "Patologías Digestivas",
+    featured: false,
+  },
+  {
+    title: "Hemorragias Digestivas",
+    description: "Atención médica urgente y evaluación especializada ante cuadros de sangrado digestivo y rectal.",
+    tag: "Atención Especializada",
+    featured: false,
+  },
+  {
+    title: "Endoscopia Digestiva",
+    description: "Procedimientos de Endoscopia Digestiva Superior y Colonoscopia para un diagnóstico seguro.",
+    tag: "Procedimientos",
     featured: false,
   },
 ]
@@ -42,24 +76,24 @@ export function ServicesSection() {
           </a>
         </div>
 
-        <ul className="mt-14 grid gap-5 sm:grid-cols-2 max-w-4xl mx-auto">
+        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, idx) => {
             const isFeatured = service.featured
             return (
               <li
                 key={service.title}
                 className={[
-                  "soft-card group relative flex flex-col rounded-2xl border p-6",
+                  "soft-card group relative flex flex-col rounded-2xl border p-6 transition-all duration-300",
                   isFeatured
                     ? "border-primary/40 bg-foreground text-background shadow-xl shadow-primary/10 hover:shadow-primary/20"
-                    : "border-border bg-card hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5",
+                    : "border-border bg-card hover:border-[#0A192F]/40 hover:bg-[#0A192F] hover:shadow-xl hover:shadow-[#0A192F]/20 hover:-translate-y-1",
                 ].join(" ")}
               >
                 <span
                   aria-hidden="true"
                   className={[
-                    "absolute right-5 top-5 font-serif text-xs",
-                    isFeatured ? "text-background/40" : "text-muted-foreground/60",
+                    "absolute right-5 top-5 font-serif text-xs transition-colors duration-300",
+                    isFeatured ? "text-background/40" : "text-muted-foreground/60 group-hover:text-blue-100/40",
                   ].join(" ")}
                 >
                   0{idx + 1}
@@ -67,8 +101,8 @@ export function ServicesSection() {
 
                 <h3
                   className={[
-                    "mt-2 font-serif text-xl font-medium",
-                    isFeatured ? "text-background" : "text-foreground",
+                    "mt-2 font-serif text-xl font-medium transition-colors duration-300",
+                    isFeatured ? "text-background" : "text-foreground group-hover:text-white",
                   ].join(" ")}
                 >
                   {service.title}
@@ -76,8 +110,8 @@ export function ServicesSection() {
 
                 <p
                   className={[
-                    "mt-2 flex-1 text-sm leading-relaxed",
-                    isFeatured ? "text-background/70" : "text-muted-foreground",
+                    "mt-2 flex-1 text-sm leading-relaxed transition-colors duration-300",
+                    isFeatured ? "text-background/70" : "text-muted-foreground group-hover:text-blue-50/80",
                   ].join(" ")}
                 >
                   {service.description}
@@ -85,10 +119,10 @@ export function ServicesSection() {
 
                 <span
                   className={[
-                    "mt-5 inline-flex w-fit items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium",
+                    "mt-5 inline-flex w-fit items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium transition-colors duration-300",
                     isFeatured
                       ? "bg-background/10 text-background"
-                      : "bg-secondary text-secondary-foreground",
+                      : "bg-secondary text-secondary-foreground group-hover:bg-white/10 group-hover:text-white",
                   ].join(" ")}
                 >
                   {service.tag}
