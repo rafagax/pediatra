@@ -16,18 +16,19 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: "Odontóloga en Maracay | Clínica Dental en Las Delicias",
+  title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo en Maracay",
   description:
-    "Clínica dental en Maracay, Av. Las Delicias. Odontóloga especialista en limpieza dental, ortodoncia, implantes y urgencias odontológicas con atención personalizada y cita rápida por WhatsApp.",
+    "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento, dolor abdominal y atención integral de niños y adolescentes. Agenda tu cita rápida por WhatsApp.",
   keywords: [
-    "odontologa en maracay",
-    "clinica dental maracay",
-    "dentista en maracay las delicias",
-    "limpieza dental maracay",
-    "ortodoncia en maracay",
-    "implantes dentales en maracay",
-    "urgencia odontologica maracay",
-    "consulta odontologica maracay",
+    "pediatra en maracay",
+    "gastroenterologo pediatra en maracay",
+    "gastropediatra maracay",
+    "consulta pediatrica maracay",
+    "pediatra infantil aragua",
+    "dolor abdominal niños maracay",
+    "reflujo en bebes maracay",
+    "estreñimiento infantil maracay",
+    "dra katherine ainslie",
   ],
 }
 
