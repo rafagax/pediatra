@@ -1,0 +1,69 @@
+import { Button } from "@/components/ui/button"
+import { Calendar } from "lucide-react"
+
+export function SiteHeader() {
+  const whatsappUrl =
+    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
+
+  return (
+    <div className="sticky top-0 z-40">
+      <div className="border-b border-border/60 bg-foreground text-background">
+        <div className="mx-auto flex min-h-9 max-w-6xl items-center justify-center px-4 py-2 text-center text-[11px] sm:px-6 md:justify-between md:text-left lg:px-8">
+          <span className="text-background/80">Maracay · Turmero · Cagua · Villa de Cura</span>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden text-background/90 transition-colors hover:text-background md:block"
+          >
+            +58 424 304 9579
+          </a>
+        </div>
+      </div>
+
+      <header className="w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          <a href="#inicio" className="flex items-center gap-2.5 transition-opacity hover:opacity-85">
+            <span className="flex flex-col leading-tight">
+              <span className="font-serif text-lg font-semibold tracking-tight text-foreground">Dra. Katherine Ainslie</span>
+              <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                Pediatra Gastro
+              </span>
+            </span>
+          </a>
+
+          <nav aria-label="Navegación principal" className="hidden items-center gap-8 md:flex">
+            <a href="#servicios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              Servicios
+            </a>
+            <a href="#proceso" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              Proceso
+            </a>
+            <a href="#testimonios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              Pacientes
+            </a>
+            <a href="#faq" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              Preguntas
+            </a>
+          </nav>
+
+          <Button asChild size="sm" className="rounded-full bg-primary px-4 text-primary-foreground hover:bg-primary/90 sm:px-5">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Calendar className="mr-2 h-4 w-4 hidden sm:block" aria-hidden="true" />
+              Agendar Cita
+            </a>
+          </Button>
+        </div>
+
+        <nav aria-label="Navegación móvil" className="border-t border-border/60 md:hidden">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2 text-xs sm:px-6">
+            <a href="#servicios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Servicios</a>
+            <a href="#proceso" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Proceso</a>
+            <a href="#testimonios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Reseñas</a>
+            <a href="#contacto" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Contacto</a>
+          </div>
+        </nav>
+      </header>
+    </div>
+  )
+}
