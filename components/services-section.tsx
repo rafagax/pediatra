@@ -56,7 +56,7 @@ export function ServicesSection() {
     "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
 
   return (
-    <section id="servicios" className="border-y border-border bg-secondary/40 py-20 sm:py-28">
+    <section id="servicios" className="border-y border-border bg-secondary/40 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">

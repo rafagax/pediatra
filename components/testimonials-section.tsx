@@ -29,7 +29,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonios" className="border-t border-border bg-secondary/40 py-20 sm:py-28">
+    <section id="testimonios" className="border-t border-border bg-secondary/40 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">

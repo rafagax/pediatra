@@ -26,7 +26,7 @@ const faqs = [
 
 export function FaqSection() {
   return (
-    <section id="faq" className="border-t border-border bg-secondary/40 py-20 sm:py-24">
+    <section id="faq" className="border-t border-border bg-secondary/40 py-12 sm:py-16">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.4fr] lg:gap-16 lg:px-8">
         <div>
           <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">Preguntas frecuentes</span>
