@@ -76,13 +76,16 @@ export function ServicesSection() {
           </a>
         </div>
 
-        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {/* CONTENEDOR MODIFICADO: Flex/Snap en móvil, Grid en SM y mayores */}
+        <ul className="mt-14 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-8 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible sm:pb-0 sm:snap-none">
           {services.map((service, idx) => {
             const isFeatured = service.featured
             return (
               <li
                 key={service.title}
                 className={[
+                  /* TARJETA MODIFICADA: Ancho fijo en móvil, auto en desktop, y soporte para snap */
+                  "w-[85vw] shrink-0 snap-center sm:w-auto sm:shrink sm:snap-align-none",
                   "soft-card group relative flex flex-col rounded-2xl border p-6 transition-all duration-300",
                   isFeatured
                     ? "border-primary/40 bg-foreground text-background shadow-xl shadow-primary/10 hover:shadow-primary/20"
