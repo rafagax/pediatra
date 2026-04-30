@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/hero-section"
 import { ServicesSection } from "@/components/services-section"
 import { ProcessSection } from "@/components/process-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
+import { ImageCtaSection } from "@/components/image-cta-section"
 import { CtaBand } from "@/components/cta-band"
 import { FaqSection } from "@/components/faq-section"
 import { SiteFooter } from "@/components/site-footer"
@@ -19,6 +20,9 @@ export default function HomePage() {
       </RevealOnScroll>
       <RevealOnScroll>
         <ProcessSection />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <ImageCtaSection />
       </RevealOnScroll>
       <RevealOnScroll>
         <TestimonialsSection />
