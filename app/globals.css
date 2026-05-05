@@ -161,7 +161,9 @@
 }
 
 /* Reposition Botpress Chatbot to the left */
-#bp-webchat-container {
+#bp-webchat-container,
+.bp-widget-launcher,
+#bp-webchat-launcher {
   left: 20px !important;
   right: auto !important;
 }
@@ -170,4 +172,5 @@
   left: 0 !important;
   right: auto !important;
 }
+
 
