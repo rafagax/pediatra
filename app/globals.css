@@ -6,7 +6,8 @@
 :root {
   /* Soft teals, whites, light warm grays */
   --background: oklch(0.93 0.08 240);
-  --foreground: oklch(0.25 0.02 200); /* deep teal-charcoal */
+  --foreground: oklch(0.25 0.02 200);
+  /* deep teal-charcoal */
 
   /* Cartas/cajas claras para que NO se vean del mismo azul que el fondo. */
   --card: oklch(0.99 0.012 245);
@@ -75,17 +76,16 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     /* Hace el fondo visible incluso con secciones semi-transparentes. */
     background-image:
-      linear-gradient(
-        180deg,
+      linear-gradient(180deg,
         rgba(85, 150, 255, 0.18) 0%,
         rgba(85, 150, 255, 0.06) 35%,
         rgba(110, 220, 200, 0.1) 70%,
-        rgba(85, 150, 255, 0) 100%
-      ),
+        rgba(85, 150, 255, 0) 100%),
       radial-gradient(1200px circle at 10% 0%, rgba(85, 150, 255, 0.22), transparent 45%),
       radial-gradient(900px circle at 90% 25%, rgba(110, 220, 200, 0.12), transparent 55%);
     background-attachment: fixed;
@@ -96,13 +96,11 @@
   /* Se aplica al <main> para que el fondo sea visible aunque el main tenga `bg-background`. */
   .page-bg {
     background-image:
-      linear-gradient(
-        180deg,
+      linear-gradient(180deg,
         rgba(85, 150, 255, 0.18) 0%,
         rgba(85, 150, 255, 0.06) 35%,
         rgba(110, 220, 200, 0.1) 70%,
-        rgba(85, 150, 255, 0) 100%
-      ),
+        rgba(85, 150, 255, 0) 100%),
       radial-gradient(1200px circle at 10% 0%, rgba(85, 150, 255, 0.22), transparent 45%),
       radial-gradient(900px circle at 90% 25%, rgba(110, 220, 200, 0.12), transparent 55%);
     background-attachment: fixed;
@@ -124,9 +122,11 @@
   0% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
   }
+
   70% {
     box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
@@ -159,5 +159,3 @@
 .soft-card:hover {
   transform: translateY(-6px);
 }
-
-
