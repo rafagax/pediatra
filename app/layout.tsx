@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Inter, Fraunces } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script"
 import "./globals.css"
 
 const inter = Inter({
@@ -42,6 +43,8 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
+        <Script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" />
+        <Script src="https://files.bpcontent.cloud/2026/05/05/20/20260505200538-RUJAJYP0.js" strategy="lazyOnload" />
       </body>
     </html>
   )
