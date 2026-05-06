@@ -14,8 +14,8 @@
 .pm-chatbot-container {
     position: fixed;
     bottom: 20px;
-    left: 20px;
-    /* Mantenemos tu alineación a la izquierda */
+    right: 20px;
+    /* Mantenemos tu alineación a la derecha */
     z-index: 999999;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     display: flex;
@@ -140,7 +140,7 @@
     position: absolute;
     bottom: 130px;
     /* Subimos la ventana para que no tape a la muñeca */
-    left: 0;
+    right: 0;
     width: 330px;
     height: 480px;
     background: var(--pm-bg-chat);
