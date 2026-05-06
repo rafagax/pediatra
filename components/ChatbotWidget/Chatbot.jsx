@@ -21,11 +21,11 @@ const knowledgeBase = [
     },
     {
         keywords: ['whatsapp', 'contacto', 'teléfono', 'telefono', 'llamar', 'número', 'numero', 'mensaje'],
-        response: '📱 Puedes contactarnos directamente por WhatsApp:\n\n👉 +58 424-304-9579\n\n¡Te respondemos a la brevedad!'
+        response: '📱 Puedes contactarnos directamente por WhatsApp:\n\n👉 https://wa.me/584243049579\n\n¡Te respondemos a la brevedad!'
     },
     {
         keywords: ['cita', 'citas', 'agendar', 'reservar', 'turno', 'horario', 'disponibilidad', 'consulta', 'precio', 'precios', 'costo', 'honorarios', 'cuánto', 'cuanto'],
-        response: '📅 Para agendar tu cita o consultar horarios disponibles, escríbenos directamente por WhatsApp:\n\n👉 +58 424-304-9579\n\nIndícanos tu zona (Maracay, Turmero, Cagua o Villa de Cura) y te confirmamos disponibilidad. ¡Es rápido y sencillo!'
+        response: '📅 Para agendar tu cita o consultar horarios disponibles, escríbenos directamente por WhatsApp:\n\n👉 https://wa.me/584243049579\n\nIndícanos tu zona (Maracay, Turmero, Cagua o Villa de Cura) y te confirmamos disponibilidad. ¡Es rápido y sencillo!'
     },
     {
         keywords: ['urgencia', 'emergencia', 'fiebre', 'fiebre alta', 'convulsión', 'convulsion', 'desmayo', 'respira', 'deshidratación', 'deshidratacion', 'sangre', 'vomita mucho'],
@@ -41,7 +41,7 @@ const knowledgeBase = [
     },
 ];
 
-const fallbackResponse = 'Disculpa, no estoy seguro de cómo ayudarte con eso. ¿Podrías reformular tu consulta?\n\nO si prefieres, puedes escribirnos directamente por WhatsApp al +58 424-304-9579 para una atención personalizada 📱';
+const fallbackResponse = 'Disculpa, no estoy seguro de cómo ayudarte con eso. ¿Podrías reformular tu consulta?\n\nO si prefieres, puedes escribirnos directamente por WhatsApp en este enlace: https://wa.me/584243049579 para una atención personalizada 📱';
 
 // Motor de coincidencia
 const getBotResponse = (userText) => {
@@ -52,6 +52,22 @@ const getBotResponse = (userText) => {
         }
     }
     return fallbackResponse;
+};
+
+// Helper para renderizar texto con links
+const renderMessageContent = (text) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.split('\n').map((line, i) => (
+        <span key={i}>
+            {line.split(urlRegex).map((part, j) => {
+                if (part.match(urlRegex)) {
+                    return <a key={j} href={part} target="_blank" rel="noopener noreferrer">{part}</a>;
+                }
+                return part;
+            })}
+            {i < text.split('\n').length - 1 && <br />}
+        </span>
+    ));
 };
 
 export default function Chatbot() {
@@ -121,7 +137,7 @@ export default function Chatbot() {
                     {/* Header */}
                     <div className="pm-header">
                         <div className="pm-header-info">
-                            <strong>Asistente Virtual</strong>
+                            {/* <strong>Asistente Virtual</strong> */}
                             <span>Dra. Katherine Ainslie</span>
                         </div>
                         <button className="pm-close-btn" onClick={handleToggle} aria-label="Cerrar chat">✕</button>
@@ -134,9 +150,7 @@ export default function Chatbot() {
                                 key={idx}
                                 className={`pm-msg ${msg.role === 'user' ? 'pm-msg-user' : 'pm-msg-bot'}`}
                             >
-                                {msg.content.split('\n').map((line, i) => (
-                                    <span key={i}>{line}{i < msg.content.split('\n').length - 1 && <br />}</span>
-                                ))}
+                                {renderMessageContent(msg.content)}
                             </div>
                         ))}
                         {isTyping && (

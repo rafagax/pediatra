@@ -177,16 +177,16 @@
 .pm-header-info {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 5px;
 }
 
 .pm-header-info strong {
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 600;
 }
 
 .pm-header-info span {
-    font-size: 12px;
+    font-size: 25px;
     opacity: 0.9;
 }
 
@@ -264,6 +264,16 @@
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 2px;
+}
+
+.pm-msg a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.pm-msg-bot a {
+    color: var(--pm-primary);
 }
 
 /* ─── Indicador de escritura ─── */
