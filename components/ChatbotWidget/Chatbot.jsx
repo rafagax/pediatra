@@ -9,7 +9,7 @@ import './Chatbot.css';
 const knowledgeBase = [
     {
         keywords: ['hola', 'buenos', 'buenas', 'ayuda', 'información', 'informacion', 'inicio'],
-        response: '¡Hola! Bienvenido/a al consultorio virtual de la Dra. Katherine Ainslie. Soy su asistente digital. ¿En qué te puedo ayudar hoy? 🩺\n(Puedes preguntarme por citas, especialidades, ubicación o urgencias).'
+        response: '¡Hola! Bienvenido/a al consultorio virtual de la Dra. Katherine Ainslie. ¿En qué te puedo ayudar hoy? 🩺\n(Puedes preguntarme por citas, especialidades, ubicación o urgencias).'
     },
     {
         keywords: ['especialidades', 'servicios', 'atiende', 'gastroenterología', 'gastroenterologia', 'nutrición', 'nutricion', 'puericultura', 'estómago', 'estomago', 'digestivo', 'reflujo', 'estreñimiento', 'alergia'],
