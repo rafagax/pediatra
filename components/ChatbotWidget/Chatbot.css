@@ -361,7 +361,7 @@
 @media (max-width: 400px) {
     .pm-window {
         width: calc(100vw - 40px);
-        left: 0;
+        left: 50% 50%;
     }
 
     .pm-cta-bubble {
