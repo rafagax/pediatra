@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter, Fraunces } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import Chatbot from "@/components/ChatbotWidget/Chatbot"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo en Maracay",
     description:
       "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento y dolor abdominal.",
-    url: "https://drakatherineainslie.com", // Adjust if domain is known, otherwise relative works for some scrapers but full URL is better.
+    url: "https://drakatherineainslie.com",
     siteName: "Dra. Katherine Ainslie",
     images: [
       {
@@ -64,6 +65,7 @@ export default function RootLayout({
     <html lang="es" className={`${inter.variable} ${fraunces.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
+        <Chatbot />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

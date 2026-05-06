@@ -4,30 +4,26 @@
 
 export const FAQS_TEMPLATE = `
 === INFORMACIÓN GENERAL ===
-Q: ¿Quiénes son y qué hacen?
-A: Somos [NOMBRE_EMPRESA], especialistas en [TU_RUBRO_O_NIVEL_DE_EXPERIENCIA]. Ayudamos a [TU_CLIENTE_IDEAL] a resolver [PROBLEMA_O_NECESIDAD_QUE_CUBRES].
+Q: ¿Quién es la Dra. Katherine Ainslie?
+A: Es médico pediatra y gastroenterólogo infantil, especialista en salud digestiva para niños y adolescentes en Maracay y zonas cercanas.
 
 Q: ¿Cuáles son sus horarios de atención?
-A: Nuestro horario de atención comercial es de [HORARIO_INICIO] a [HORARIO_FIN] de [DIAS_ATENCION].
+A: Los horarios varían según la sede. Por favor consulta por WhatsApp para confirmarte la disponibilidad en Maracay, Turmero, Cagua o Villa de Cura.
 
 Q: ¿Dónde están ubicados?
-A: Nos encontramos en [DIRECCION_FISICA_O_CIUDAD]. [AGREGAR SI ATENDEMOS ONLINE].
-
-=== PRECIOS Y PAGOS ===
-Q: ¿Cuáles son los métodos de pago?
-A: Aceptamos [TARJETAS, TRANSFERENCIAS, PAYPAL, ETC].
-
-Q: ¿Entregan factura?
-A: [SÍ/NO].
+A: Atendemos en varias sedes: Maracay (Centro Médico Santa Marta), Turmero (Instituto Policlínico Turmero), Cagua (Policlínica Centro) y Villa de Cura (Laboratorio Bearne).
 
 === SERVICIOS / PRODUCTOS ===
-Q: ¿Qué servicios ofrecen exactamente?
-A: Ofrecemos [SERVICIO_1], [SERVICIO_2] y [SERVICIO_3].
+Q: ¿Qué servicios médicos ofrecen?
+A: Ofrecemos consulta de pediatría integral y gastroenterología infantil. Además, contamos con apoyo de especialistas en cardiología, neumonología, otorrinolaringología, endocrinología infantil, dermatología, nefrología y neurocirugía.
 
-Q: [PREGUNTA_ESPECÍFICA_1]
-A: [RESPUESTA_1]
+Q: ¿Qué enfermedades trata la gastroenterología infantil?
+A: Tratamos condiciones como reflujo, estreñimiento, dolor abdominal, alergias alimentarias, celiaquía y otros problemas digestivos en niños.
+
+Q: ¿Atienden niños y adultos?
+A: La consulta principal es pediátrica, pero ofrecemos coordinación con especialistas que atienden tanto pacientes pediátricos como adultos según cada caso.
 
 === CIERRE DE VENTAS ===
-Q: ¿Cómo puedo contratar o comprar?
-A: Puedes hacerlo directamente a través de nuestro WhatsApp o agendando una cita previa con un asesor.
+Q: ¿Cómo agendo una cita pediátrica?
+A: Puedes agendar directamente por WhatsApp. Solo haz clic en el botón de agendar cita, cuéntanos qué servicio te interesa y te confirmamos horario disponible.
 `;
