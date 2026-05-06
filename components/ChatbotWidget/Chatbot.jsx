@@ -90,7 +90,7 @@ export default function Chatbot() {
             setTimeout(() => {
                 setMessages([{
                     role: 'bot',
-                    content: '¡Hola! 👋 Soy el asistente virtual de la Dra. Katherine Ainslie.\n¿En qué puedo ayudarte hoy? Puedes preguntarme por citas, especialidades, ubicación o urgencias.'
+                    content: '¡Hola! 👋 Soy la Dra. Katherine Ainslie.\n¿En qué puedo ayudarte hoy? Puedes preguntarme por citas, especialidades, ubicación o urgencias.'
                 }]);
             }, 300);
         }
