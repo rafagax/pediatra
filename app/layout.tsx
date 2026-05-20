@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Dra. Katherine Ainslie",
     images: [
       {
-        url: "/images/portada-katherine.png",
+        url: "/images/portada-katherine.jpg",
         width: 1200,
         height: 630,
         alt: "Dra. Katherine Ainslie - Pediatra Gastroenterólogo",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo",
     description: "Atención integral para la salud digestiva de tus hijos en Maracay.",
-    images: ["/images/portada-katherine.png"],
+    images: ["/images/portada-katherine.jpg"],
   },
 }
 
