@@ -37,7 +37,7 @@ export function ProcessSection() {
           <div className="relative">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-muted shadow-xl shadow-primary/10 ring-1 ring-border">
               <Image
-                src="/images/doctora-2.png"
+                src="/images/servicios-2.jpg"
                 alt="Doctora atendiendo con cercanía a paciente pediátrica en consulta"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"

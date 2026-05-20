@@ -58,7 +58,7 @@ export function HeroSection() {
         <div className="relative">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.8rem] bg-muted shadow-xl shadow-primary/10 ring-1 ring-border">
             <Image
-              src="/images/portada-katherine.png"
+              src="/images/portada-katherine.jpg"
               alt="Doctora pediatra en consultorio médico en Maracay"
               fill
               priority
