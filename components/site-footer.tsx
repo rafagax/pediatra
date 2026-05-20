@@ -67,14 +67,10 @@ export function SiteFooter() {
               corresponde.
             </p>
             <div className="mt-4 overflow-hidden rounded-2xl border border-background/10">
-              <iframe
-                title="Ubicación Centro Médico Santa Marta en Maracay"
-                src="https://www.google.com/maps?q=Centro+Medico+Santa+Marta,+Maracay,+Aragua,+Venezuela&output=embed"
-                width="100%"
-                height="220"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="block"
+              <img
+                src="/images/ubicanos.jpg"
+                alt="Ubicación de las sedes - Ubícanos"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>

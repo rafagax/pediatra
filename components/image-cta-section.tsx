@@ -18,7 +18,7 @@ export function ImageCtaSection() {
           {/* CORRECCIÓN 2: Unificamos el contenedor. 'aspect-[4/5]' asegura la proporción correcta. */}
           <div className="relative w-full aspect-[4/5] bg-muted overflow-hidden rounded-[1.8rem] border border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <Image
-              src="/images/servicios-1.jpg"
+              src="/images/2servicios-1.jpg"
               alt="Lista de servicios médicos pediátricos"
               fill
               priority
@@ -30,7 +30,7 @@ export function ImageCtaSection() {
           {/* Segunda Imagen */}
           <div className="relative w-full aspect-[4/5] bg-muted overflow-hidden rounded-[1.8rem] border border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <Image
-              src="/images/servicios-2.jpg"
+              src="/images/2servicios-2.jpg"
               alt="Lista de patologías digestivas infantiles"
               fill
               priority
