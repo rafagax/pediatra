@@ -15,26 +15,25 @@ export function ImageCtaSection() {
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
 
           {/* Primera Imagen */}
-          {/* CORRECCIÓN 2: Unificamos el contenedor. 'aspect-[4/5]' asegura la proporción correcta. */}
-          <div className="relative w-full aspect-[4/5] bg-muted overflow-hidden rounded-[1.8rem] border border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div className="relative w-full aspect-square bg-muted overflow-hidden rounded-[1.8rem] border border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <Image
               src="/images/2servicios-1.jpg"
               alt="Lista de servicios médicos pediátricos"
               fill
               priority
-              className="object-contain object-center"
+              className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
 
           {/* Segunda Imagen */}
-          <div className="relative w-full aspect-[4/5] bg-muted overflow-hidden rounded-[1.8rem] border border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div className="relative w-full aspect-square bg-muted overflow-hidden rounded-[1.8rem] border border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <Image
               src="/images/2servicios-2.jpg"
               alt="Lista de patologías digestivas infantiles"
               fill
               priority
-              className="object-contain object-center"
+              className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
