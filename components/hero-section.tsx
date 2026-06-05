@@ -63,7 +63,7 @@ export function HeroSection() {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+              className="object-contain object-center"
             />
 
             <div

@@ -22,7 +22,7 @@ export function ImageCtaSection() {
               alt="Lista de servicios médicos pediátricos"
               fill
               priority
-              className="object-cover object-center"
+              className="object-contain object-center"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
@@ -34,7 +34,7 @@ export function ImageCtaSection() {
               alt="Lista de patologías digestivas infantiles"
               fill
               priority
-              className="object-cover object-center"
+              className="object-contain object-center"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
