@@ -54,6 +54,9 @@ export const metadata: Metadata = {
     description: "Atención integral para la salud digestiva de tus hijos en Maracay.",
     images: ["/images/portada-katherine.jpg"],
   },
+  verification: {
+    google: "wrH_W1JnOIqFrsSMhF6bQBwpAqNvatoNUdW0QrjOxOo",
+  },
 }
 
 export default function RootLayout({
