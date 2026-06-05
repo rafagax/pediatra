@@ -14,8 +14,7 @@
 .pm-chatbot-container {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    /* Mantenemos tu alineación a la derecha */
+    left: 20px;
     z-index: 999999;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     display: flex;
@@ -139,8 +138,7 @@
 .pm-window {
     position: absolute;
     bottom: 130px;
-    /* Subimos la ventana para que no tape a la muñeca */
-    right: 0;
+    left: 0;
     width: 330px;
     height: 480px;
     background: var(--pm-bg-chat);
@@ -371,7 +369,7 @@
 @media (max-width: 400px) {
     .pm-window {
         width: calc(100vw - 40px);
-        left: 50% 50%;
+        left: 0;
     }
 
     .pm-cta-bubble {
