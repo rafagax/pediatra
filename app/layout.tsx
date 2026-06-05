@@ -1,8 +1,11 @@
 import type { Metadata } from "next"
 import { Inter, Fraunces } from "next/font/google"
+import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import Chatbot from "@/components/ChatbotWidget/Chatbot"
+
+const GA_MEASUREMENT_ID = "G-BHNJFHZVZL"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -67,6 +70,22 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${fraunces.variable} bg-background`}>
       <body className="font-sans antialiased">
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
         {children}
         <Chatbot />
         {process.env.NODE_ENV === "production" && <Analytics />}
