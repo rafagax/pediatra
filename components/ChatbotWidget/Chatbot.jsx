@@ -186,7 +186,7 @@ export default function Chatbot() {
             <div className="pm-trigger-wrapper">
                 {/* CTA Bubble centrado ARRIBA de la imagen */}
                 <div className={`pm-cta-bubble ${showCta ? 'pm-cta-visible' : 'pm-cta-hidden'}`}>
-                    <span>¿Dudas? ¡Chatea conmigo! ✨</span>
+                    <span>¿Dudas? ¡Chatea conmigo!</span>
                 </div>
 
                 <button
