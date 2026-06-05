@@ -20,7 +20,7 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.dragastropedia-aragua.com"),
+  metadataBase: new URL("https://dragastropedia-aragua.com"),
   title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo en Maracay",
   description:
     "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento, dolor abdominal y atención integral de niños y adolescentes. Agenda tu cita rápida por WhatsApp.",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo en Maracay",
     description:
       "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento y dolor abdominal.",
-    url: "https://www.dragastropedia-aragua.com",
+    url: "https://dragastropedia-aragua.com",
     siteName: "Dra. Katherine Ainslie",
     images: [
       {
