@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica en Maracay",
+  title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica en Aragua",
   description:
-    "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento, dolor abdominal y atención integral de niños y adolescentes. Agenda tu cita rápida por WhatsApp.",
+    "Especialista en pediatría y gastroenterología infantil en el estado Aragua: Maracay, Turmero, Cagua y Villa de Cura. Diagnóstico y tratamiento de reflujo, estreñimiento, dolor abdominal y atención integral de niños y adolescentes. Agenda tu cita rápida por WhatsApp.",
   keywords: [
     "pediatra en maracay",
     "gastroenterologo pediatra en maracay",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     "dra katherine ainslie",
   ],
   openGraph: {
-    title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica en Maracay",
+    title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica en Aragua",
     description:
-      "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento y dolor abdominal.",
+      "Especialista en pediatría y gastroenterología infantil en Aragua. Diagnóstico y tratamiento de reflujo, estreñimiento y dolor abdominal.",
     url: "https://dragastropedia-aragua.com",
     siteName: "Dra. Katherine Ainslie",
     images: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica",
-    description: "Atención integral para la salud digestiva de tus hijos en Maracay.",
+    description: "Atención integral para la salud digestiva de tus hijos en Aragua.",
     images: ["/images/portada-katherine.jpg"],
   },
   verification: {

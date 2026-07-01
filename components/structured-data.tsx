@@ -3,7 +3,7 @@ import { faqs } from "@/components/faq-section"
 
 // Datos estructurados (Schema.org / JSON-LD).
 // Ayudan a Google a entender que esto es una consulta de gastroenterología y
-// nutrición pediátrica en Maracay, con sus sedes, teléfono, horario y preguntas frecuentes.
+// nutrición pediátrica en Aragua, con sus sedes, teléfono, horario y preguntas frecuentes.
 export function StructuredData() {
   const principal = SEDES[0]
 
@@ -15,7 +15,7 @@ export function StructuredData() {
         "@id": `${SITE_URL}/#physician`,
         name: "Dra. Katherine Ainslie — Gastroenterología y Nutrición Pediátrica",
         description:
-          "Especialista en gastroenterología y nutrición pediátrica en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento, dolor abdominal y atención integral de niños y adolescentes.",
+          "Especialista en gastroenterología y nutrición pediátrica en Aragua (Maracay, Turmero, Cagua y Villa de Cura). Diagnóstico y tratamiento de reflujo, estreñimiento, dolor abdominal y atención integral de niños y adolescentes.",
         url: SITE_URL,
         telephone: BUSINESS_PHONE,
         image: `${SITE_URL}/images/portada-katherine.jpg`,

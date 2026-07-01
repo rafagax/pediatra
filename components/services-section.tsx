@@ -157,7 +157,7 @@ export function ServicesSection() {
               Servicios principales
             </span>
             <h2 className="mt-3 font-serif text-3xl font-medium tracking-tight text-foreground text-balance sm:text-[2.5rem] sm:leading-[1.1]">
-              Servicios médicos disponibles en Maracay,{" "}
+              Servicios médicos disponibles en Aragua,{" "}
               <span className="text-primary">pensados para niños.</span>
             </h2>
           </div>

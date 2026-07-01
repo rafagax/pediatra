@@ -34,7 +34,7 @@ export function FaqSection() {
             Resolvemos tus dudas antes de tu primera cita.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground text-pretty">
-            Como consulta pediátrica en Maracay, queremos que llegues informada y tranquila. ¿No encuentras tu duda?
+            Como consulta pediátrica en Aragua, queremos que llegues informada y tranquila. ¿No encuentras tu duda?
             Escríbenos por WhatsApp y te respondemos personalmente.
           </p>
         </div>

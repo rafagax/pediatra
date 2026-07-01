@@ -13,7 +13,7 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-background/70">
-              Especialista en gastroenterología y nutrición pediátrica en Maracay, con atención cercana y coordinación
+              Especialista en gastroenterología y nutrición pediátrica en Aragua, con atención cercana y coordinación
               con especialistas para brindar un enfoque integral a cada familia.
             </p>
 
@@ -80,7 +80,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Dra. Katherine Ainslie · Consulta de Gastroenterología y Nutrición Pediátrica en Maracay. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Dra. Katherine Ainslie · Consulta de Gastroenterología y Nutrición Pediátrica en Aragua. Todos los derechos reservados.</p>
           <p>Maracay · Turmero · Cagua · Villa de Cura</p>
         </div>
       </div>

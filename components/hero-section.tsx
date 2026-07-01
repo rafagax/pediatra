@@ -14,11 +14,11 @@ export function HeroSection() {
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 sm:px-6 md:py-20 lg:grid-cols-[1.1fr_1fr] lg:gap-14 lg:px-8">
         <div className="max-w-xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-            Cupos de consulta disponibles hoy en Maracay
+            Cupos de consulta disponibles hoy en Aragua
           </span>
 
           <h1 className="mt-5 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground text-balance sm:text-5xl lg:text-[3.75rem]">
-            Gastroenterología y Nutrición Pediátrica en Maracay.
+            Gastroenterología y Nutrición Pediátrica en Aragua.
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
@@ -57,7 +57,7 @@ export function HeroSection() {
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.8rem] bg-muted shadow-xl shadow-primary/10 ring-1 ring-border">
             <Image
               src="/images/portada-katherine.jpg"
-              alt="Doctora pediatra en consultorio médico en Maracay"
+              alt="Doctora pediatra en consultorio médico en Aragua"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"

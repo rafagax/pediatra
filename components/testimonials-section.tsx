@@ -13,14 +13,14 @@ const testimonials = [
   },
   {
     name: "Carlos Rivas",
-    location: "Centro de Maracay",
+    location: "Turmero, Aragua",
     quote: "El proceso fue claro y rápido. Se nota la calidad humana en cada consulta y en el seguimiento.",
     image: "/images/testimonial-2.jpg",
     treatment: "Tratamiento integral",
   },
   {
     name: "Mamá de paciente pediátrica",
-    location: "Av. Las Delicias",
+    location: "Cagua, Aragua",
     quote: "Mi hija se sintió cómoda desde el primer momento. La doctora fue muy cariñosa y nos orientó en cada paso.",
     image: "/images/testimonial-3.jpg",
     treatment: "Consulta pediátrica",
@@ -69,12 +69,7 @@ export function TestimonialsSection() {
         isDesktop && idx === 1 ? "md:translate-y-4" : "",
       ].join(" ")}
     >
-      <div className="flex items-center justify-between text-xs text-muted-foreground">
-        <span>Opinión verificada</span>
-        <span className="font-semibold text-primary">Google</span>
-      </div>
-
-      <p className="mt-4 flex-1 text-base leading-relaxed text-foreground text-pretty select-none">
+      <p className="flex-1 text-base leading-relaxed text-foreground text-pretty select-none">
         &ldquo;{t.quote}&rdquo;
       </p>
 
@@ -82,7 +77,7 @@ export function TestimonialsSection() {
         <div className="relative h-12 w-12 overflow-hidden rounded-full bg-muted ring-2 ring-accent">
           <Image
             src={t.image || "/placeholder.svg"}
-            alt={`Foto de ${t.name}, paciente de pediatría en Maracay`}
+            alt={`Foto de ${t.name}, paciente de pediatría en Aragua`}
             fill
             sizes="48px"
             className="object-cover pointer-events-none"
@@ -122,12 +117,8 @@ export function TestimonialsSection() {
             </span>
             <h2 className="mt-3 font-serif text-3xl font-medium tracking-tight text-foreground text-balance sm:text-[2.5rem] sm:leading-[1.1]">
               Pacientes felices,{" "}
-              <span className="text-primary">familias tranquilas</span> en Maracay.
+              <span className="text-primary">familias tranquilas</span> en Aragua.
             </h2>
-          </div>
-          <div className="rounded-full border border-border bg-card px-4 py-2 text-sm shadow-sm hidden md:block">
-            <span className="text-sm font-semibold text-foreground">4.9 / 5</span>
-            <span className="text-sm text-muted-foreground"> · Google Reseñas</span>
           </div>
         </div>
 
