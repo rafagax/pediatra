@@ -1,7 +1,6 @@
-export function SiteFooter() {
-  const whatsappUrl =
-    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/whatsapp"
 
+export function SiteFooter() {
   return (
     <footer id="contacto" className="bg-foreground text-background">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
@@ -10,17 +9,17 @@ export function SiteFooter() {
             <div className="flex items-center gap-2">
               <div className="leading-tight">
                 <p className="font-serif text-lg font-semibold">Dra. Katherine Ainslie</p>
-                <p className="text-[11px] uppercase tracking-[0.18em] text-background/60">Pediatra Gastro</p>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-background/60">Gastroenterología y Nutrición Pediátrica</p>
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-background/70">
-              Pediatra Gastro en Maracay con atención cercana y coordinación con especialistas para brindar un enfoque
-              integral a cada familia.
+              Especialista en gastroenterología y nutrición pediátrica en Maracay, con atención cercana y coordinación
+              con especialistas para brindar un enfoque integral a cada familia.
             </p>
 
             <div className="mt-6 flex items-center gap-3">
               <a
-                href={whatsappUrl}
+                href={WHATSAPP_URL}
                 aria-label="WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -48,8 +47,8 @@ export function SiteFooter() {
                 </span>
               </li>
               <li className="text-background/80">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-background">
-                  +58 424-304-9579
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-background">
+                  {WHATSAPP_DISPLAY}
                 </a>
               </li>
               <li className="text-background/80">
@@ -81,7 +80,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Dra. Katherine Ainslie · Consulta Pediátrica Gastro en Maracay. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Dra. Katherine Ainslie · Consulta de Gastroenterología y Nutrición Pediátrica en Maracay. Todos los derechos reservados.</p>
           <p>Maracay · Turmero · Cagua · Villa de Cura</p>
         </div>
       </div>

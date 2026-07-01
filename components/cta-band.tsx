@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Phone } from "lucide-react"
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/whatsapp"
 
 export function CtaBand() {
-  const whatsappUrl =
-    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
-
   return (
     <section className="py-10 sm:py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -29,7 +27,7 @@ export function CtaBand() {
                 Cupos disponibles esta semana
               </span>
               <h2 className="mt-5 font-serif text-3xl font-medium leading-[1.1] tracking-tight text-background text-balance sm:text-[2.75rem]">
-                Agenda la cita con la Pediatra Gastro de tu hijo hoy{" "}
+                Agenda la cita con la gastroenteróloga pediatra de tu hijo hoy{" "}
                 <span className="text-accent">por WhatsApp en minutos.</span>
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-background/75 text-pretty">
@@ -43,7 +41,7 @@ export function CtaBand() {
                 size="lg"
                 className="h-14 rounded-full bg-primary px-8 text-lg font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
               >
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                   Agendar cita ahora
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </a>
@@ -54,9 +52,9 @@ export function CtaBand() {
                 variant="outline"
                 className="rounded-full border-background/30 bg-transparent px-7 text-base text-background hover:bg-background/10 hover:text-background"
               >
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                  +58 424 304 9579
+                  {WHATSAPP_DISPLAY}
                 </a>
               </Button>
             </div>

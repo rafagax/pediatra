@@ -21,7 +21,7 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dragastropedia-aragua.com"),
-  title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo en Maracay",
+  title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica en Maracay",
   description:
     "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento, dolor abdominal y atención integral de niños y adolescentes. Agenda tu cita rápida por WhatsApp.",
   keywords: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "dra katherine ainslie",
   ],
   openGraph: {
-    title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo en Maracay",
+    title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica en Maracay",
     description:
       "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento y dolor abdominal.",
     url: "https://dragastropedia-aragua.com",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: "/images/portada-katherine.jpg",
         width: 1200,
         height: 630,
-        alt: "Dra. Katherine Ainslie - Pediatra Gastroenterólogo",
+        alt: "Dra. Katherine Ainslie - Gastroenteróloga y Nutrióloga Pediatra",
       },
     ],
     locale: "es_VE",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dra. Katherine Ainslie | Pediatra y Gastroenterólogo",
+    title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica",
     description: "Atención integral para la salud digestiva de tus hijos en Maracay.",
     images: ["/images/portada-katherine.jpg"],
   },

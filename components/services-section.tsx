@@ -2,11 +2,12 @@
 
 import { useRef, useState, useEffect } from "react"
 import { ArrowUpRight } from "lucide-react"
+import { WHATSAPP_URL } from "@/lib/whatsapp"
 
 const services = [
   {
     title: "Consulta Pediátrica",
-    description: "Atención especializada, control de niño sano, evaluación nutricional y esquematización de vacunas.",
+    description: "Atención especializada, control de niño sano, evaluación nutricional y esquema de vacunación.",
     tag: "Pediatría Integral",
     featured: false,
   },
@@ -57,9 +58,6 @@ const services = [
 export function ServicesSection() {
   const scrollRef = useRef(null)
   const [isInteracting, setIsInteracting] = useState(false)
-
-  const whatsappUrl =
-    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
 
   // Lógica avanzada de auto-scroll fluido
   useEffect(() => {
@@ -166,7 +164,7 @@ export function ServicesSection() {
 
           {/* BOTÓN CTA MEJORADO */}
           <a
-            href={whatsappUrl}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="group flex w-full md:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:shadow-lg active:scale-[0.98] md:py-2.5"

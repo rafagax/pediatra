@@ -23,7 +23,7 @@ const testimonials = [
     location: "Av. Las Delicias",
     quote: "Mi hija se sintió cómoda desde el primer momento. La doctora fue muy cariñosa y nos orientó en cada paso.",
     image: "/images/testimonial-3.jpg",
-    treatment: "Odontología pediátrica",
+    treatment: "Consulta pediátrica",
   },
 ]
 

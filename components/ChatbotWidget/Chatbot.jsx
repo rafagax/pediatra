@@ -13,7 +13,7 @@ const knowledgeBase = [
     },
     {
         keywords: ['especialidades', 'servicios', 'atiende', 'gastroenterología', 'gastroenterologia', 'nutrición', 'nutricion', 'puericultura', 'estómago', 'estomago', 'digestivo', 'reflujo', 'estreñimiento', 'alergia'],
-        response: 'La Dra. Katherine Ainslie es Pediatra Puericultor, con especialidad en Gastroenterología y Nutrición Pediátrica 🏥\n\nAtendemos:\n• Control de niño sano\n• Evaluación nutricional\n• Alergias alimentarias\n• Reflujo gastroesofágico\n• Estreñimiento\n• Dolor abdominal crónico\n• Patologías gastrointestinales'
+        response: 'La Dra. Katherine Ainslie es Pediatra Puericultora, con especialidad en Gastroenterología y Nutrición Pediátrica 🏥\n\nAtendemos:\n• Control de niño sano\n• Evaluación nutricional\n• Alergias alimentarias\n• Reflujo gastroesofágico\n• Estreñimiento\n• Dolor abdominal crónico\n• Patologías gastrointestinales'
     },
     {
         keywords: ['ubicación', 'ubicacion', 'dónde', 'donde', 'dirección', 'direccion', 'maracay', 'consultorio', 'sede', 'sedes'],

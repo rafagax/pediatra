@@ -1,22 +1,20 @@
 import { Button } from "@/components/ui/button"
 import { Calendar } from "lucide-react"
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/whatsapp"
 
 export function SiteHeader() {
-  const whatsappUrl =
-    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
-
   return (
     <div className="sticky top-0 z-40">
       <div className="border-b border-border/60 bg-foreground text-background">
         <div className="mx-auto flex min-h-9 max-w-6xl items-center justify-center px-4 py-2 text-center text-[11px] sm:px-6 md:justify-between md:text-left lg:px-8">
           <span className="text-background/80">Maracay · Turmero · Cagua · Villa de Cura</span>
           <a
-            href={whatsappUrl}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden text-background/90 transition-colors hover:text-background md:block"
           >
-            +58 424 304 9579
+            {WHATSAPP_DISPLAY}
           </a>
         </div>
       </div>
@@ -27,7 +25,7 @@ export function SiteHeader() {
             <span className="flex flex-col leading-tight">
               <span className="font-serif text-lg font-semibold tracking-tight text-foreground">Dra. Katherine Ainslie</span>
               <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                Pediatra Gastro
+                Gastroenterología y Nutrición Pediátrica
               </span>
             </span>
           </a>
@@ -48,7 +46,7 @@ export function SiteHeader() {
           </nav>
 
           <Button asChild size="sm" className="rounded-full bg-primary px-4 text-primary-foreground hover:bg-primary/90 sm:px-5">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Calendar className="mr-2 h-4 w-4 hidden sm:block" aria-hidden="true" />
               Agendar Cita
             </a>

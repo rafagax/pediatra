@@ -1,10 +1,9 @@
-export function WhatsAppFloat() {
-  const whatsappUrl =
-    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
+import { WHATSAPP_URL } from "@/lib/whatsapp"
 
+export function WhatsAppFloat() {
   return (
     <a
-      href={whatsappUrl}
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escríbenos por WhatsApp"

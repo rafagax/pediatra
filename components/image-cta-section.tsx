@@ -1,11 +1,9 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { WHATSAPP_URL } from "@/lib/whatsapp"
 
 export function ImageCtaSection() {
-  const whatsappUrl =
-    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
-
   return (
     <section className="py-12 sm:py-16 bg-secondary/20 border-t border-border">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -52,7 +50,7 @@ export function ImageCtaSection() {
             size="lg"
             className="rounded-full bg-primary px-8 text-lg font-medium text-primary-foreground hover:bg-primary/90 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 h-14"
           >
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               Agendar cita ahora
               <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
             </a>

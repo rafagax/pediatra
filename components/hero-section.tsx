@@ -1,11 +1,9 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Phone } from "lucide-react"
+import { WHATSAPP_URL } from "@/lib/whatsapp"
 
 export function HeroSection() {
-  const whatsappUrl =
-    "https://wa.me/584243049579?text=Hola%20Dra.%20Katherine%20Ainslie%2C%20quiero%20agendar%20una%20cita%20con%20la%20pediatra%20gastro.%20Estoy%20interesado(a)%20en%3A%20"
-
   return (
     <section id="inicio" className="relative overflow-hidden">
       <div
@@ -20,12 +18,12 @@ export function HeroSection() {
           </span>
 
           <h1 className="mt-5 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground text-balance sm:text-5xl lg:text-[3.75rem]">
-            Atención de Pediatra Gastro para cuidar la salud digestiva de tus hijos con confianza.
+            Atención en Gastroenterología y Nutrición Pediátrica para cuidar la salud digestiva de tus hijos con confianza.
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
-            Agenda por WhatsApp en minutos y recibe orientación clara sobre la consulta de pediatría gastro y los servicios
-            médicos de apoyo disponibles.
+            Agenda por WhatsApp en minutos y recibe orientación clara sobre la consulta de gastroenterología y nutrición
+            pediátrica, y los servicios médicos de apoyo disponibles.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -34,7 +32,7 @@ export function HeroSection() {
               size="lg"
               className="rounded-full bg-primary px-7 text-base text-primary-foreground hover:bg-primary/90"
             >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Agendar cita por WhatsApp
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </a>
@@ -45,7 +43,7 @@ export function HeroSection() {
               variant="outline"
               className="rounded-full border-border bg-card px-7 text-base text-foreground hover:bg-accent"
             >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                 Escribir por WhatsApp
               </a>
@@ -73,7 +71,7 @@ export function HeroSection() {
 
             <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl border border-white/30 bg-card/90 px-4 py-3 backdrop-blur">
               <div>
-                <p className="font-serif text-sm font-semibold text-foreground">Consulta de Pediatra Gastro</p>
+                <p className="font-serif text-sm font-semibold text-foreground">Consulta de Gastroenterología Pediátrica</p>
                 <p className="text-[11px] text-muted-foreground">Atención cálida para niños y sus familias</p>
               </div>
               <span className="text-xs font-semibold text-primary">Agenda hoy</span>
