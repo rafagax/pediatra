@@ -7,12 +7,37 @@ export const SITE_URL = "https://dragastropedia-aragua.com"
 /** Teléfono en formato internacional E.164 (usado en los datos estructurados). */
 export const BUSINESS_PHONE = "+584243049579"
 
-/** Sedes donde atiende la doctora. La primera es la sede principal para SEO. */
+/**
+ * Sedes donde atiende la doctora. La primera es la sede principal para SEO.
+ * `mapQuery` es lo que se busca en Google Maps para cada mapa del footer.
+ * ⚠️ En Villa de Cura el consultorio varía según disponibilidad, por eso el mapa
+ * apunta solo al pueblo (la doctora indica la dirección exacta por WhatsApp).
+ */
 export const SEDES = [
-  { ciudad: "Maracay", lugar: "Centro Médico Santa Marta", region: "Aragua" },
-  { ciudad: "Turmero", lugar: "Instituto Policlínico Turmero", region: "Aragua" },
-  { ciudad: "Cagua", lugar: "Policlínica Centro", region: "Aragua" },
-  { ciudad: "Villa de Cura", lugar: "Laboratorio Bearne", region: "Aragua" },
+  {
+    ciudad: "Maracay",
+    lugar: "Centro Médico Santa Marta",
+    region: "Aragua",
+    mapQuery: "Centro Medico Santa Marta, Maracay, Aragua, Venezuela",
+  },
+  {
+    ciudad: "Turmero",
+    lugar: "Instituto Policlínico Turmero",
+    region: "Aragua",
+    mapQuery: "Policlínico Turmero, Turmero, Aragua, Venezuela",
+  },
+  {
+    ciudad: "Cagua",
+    lugar: "Policlínica Centro",
+    region: "Aragua",
+    mapQuery: "Policlínica Centro, Cagua, Aragua, Venezuela",
+  },
+  {
+    ciudad: "Villa de Cura",
+    lugar: "Laboratorio Bearne",
+    region: "Aragua",
+    mapQuery: "Villa de Cura, Aragua, Venezuela",
+  },
 ]
 
 /**

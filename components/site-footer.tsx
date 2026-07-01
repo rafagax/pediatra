@@ -1,4 +1,5 @@
 import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/whatsapp"
+import { SEDES } from "@/lib/site"
 
 export function SiteFooter() {
   return (
@@ -65,16 +66,23 @@ export function SiteFooter() {
               Atendemos en cuatro sedes. Escríbenos por WhatsApp y te enviamos la ubicación exacta de la sede que te
               corresponde.
             </p>
-            <div className="mt-4 overflow-hidden rounded-2xl border border-background/10">
-              <iframe
-                title="Ubicación Centro Médico Santa Marta en Maracay"
-                src="https://www.google.com/maps?q=Centro+Medico+Santa+Marta,+Maracay,+Aragua,+Venezuela&output=embed"
-                width="100%"
-                height="220"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="block"
-              />
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              {SEDES.map((sede) => (
+                <div key={sede.ciudad} className="overflow-hidden rounded-xl border border-background/10">
+                  <iframe
+                    title={`Ubicación de la sede en ${sede.ciudad}`}
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(sede.mapQuery)}&output=embed`}
+                    width="100%"
+                    height="130"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="block"
+                  />
+                  <p className="bg-background/5 px-2.5 py-1.5 text-[11px] font-medium text-background/80">
+                    {sede.ciudad}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
