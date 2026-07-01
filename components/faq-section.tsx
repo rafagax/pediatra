@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-const faqs = [
+export const faqs = [
   {
     q: "¿Cómo agendo una cita pediátrica?",
     a: "Puedes agendar directamente por WhatsApp. Solo haz clic en el botón de agendar cita, cuéntanos qué servicio te interesa y te confirmamos horario disponible.",

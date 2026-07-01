@@ -9,10 +9,12 @@ import { FaqSection } from "@/components/faq-section"
 import { SiteFooter } from "@/components/site-footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { RevealOnScroll } from "@/components/reveal-on-scroll"
+import { StructuredData } from "@/components/structured-data"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-background page-bg text-foreground">
+      <StructuredData />
       <SiteHeader />
       <HeroSection />
       <RevealOnScroll>

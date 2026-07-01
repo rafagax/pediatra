@@ -4,6 +4,7 @@ import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import Chatbot from "@/components/ChatbotWidget/Chatbot"
+import { SITE_URL } from "@/lib/site"
 
 const GA_MEASUREMENT_ID = "G-BHNJFHZVZL"
 
@@ -20,7 +21,10 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dragastropedia-aragua.com"),
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "/",
+  },
   title: "Dra. Katherine Ainslie | Gastroenterología y Nutrición Pediátrica en Maracay",
   description:
     "Especialista en pediatría y gastroenterología infantil en Maracay. Diagnóstico y tratamiento de reflujo, estreñimiento, dolor abdominal y atención integral de niños y adolescentes. Agenda tu cita rápida por WhatsApp.",

@@ -18,7 +18,7 @@ export function HeroSection() {
           </span>
 
           <h1 className="mt-5 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground text-balance sm:text-5xl lg:text-[3.75rem]">
-            Atención en Gastroenterología y Nutrición Pediátrica para cuidar la salud digestiva de tus hijos con confianza.
+            Gastroenterología y Nutrición Pediátrica en Maracay para cuidar la salud digestiva de tus hijos con confianza.
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
