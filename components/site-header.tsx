@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "lucide-react"
 import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/whatsapp"
@@ -21,26 +22,32 @@ export function SiteHeader() {
 
       <header className="w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#inicio" className="flex items-center gap-2.5 transition-opacity hover:opacity-85">
+          <Link href="/#inicio" className="flex items-center gap-2.5 transition-opacity hover:opacity-85">
             <span className="flex flex-col leading-tight">
               <span className="font-serif text-lg font-semibold tracking-tight text-foreground">Dra. Katherine Ainslie</span>
               <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                 Gastroenterología y Nutrición Pediátrica
               </span>
             </span>
-          </a>
+          </Link>
 
           <nav aria-label="Navegación principal" className="hidden items-center gap-8 md:flex">
-            <a href="#servicios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <a href="/#servicios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Servicios
             </a>
-            <a href="#proceso" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <a href="/#proceso" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Proceso
             </a>
-            <a href="#testimonios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Link
+              href="/dra-katherine-ainslie"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              La Doctora
+            </Link>
+            <a href="/#testimonios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Pacientes
             </a>
-            <a href="#faq" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <a href="/#faq" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Preguntas
             </a>
           </nav>
@@ -55,10 +62,11 @@ export function SiteHeader() {
 
         <nav aria-label="Navegación móvil" className="border-t border-border/60 md:hidden">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2 text-xs sm:px-6">
-            <a href="#servicios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Servicios</a>
-            <a href="#proceso" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Proceso</a>
-            <a href="#testimonios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Reseñas</a>
-            <a href="#contacto" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Contacto</a>
+            <a href="/#servicios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Servicios</a>
+            <a href="/#proceso" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Proceso</a>
+            <Link href="/dra-katherine-ainslie" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">La Doctora</Link>
+            <a href="/#testimonios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Reseñas</a>
+            <a href="/#contacto" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Contacto</a>
           </div>
         </nav>
       </header>

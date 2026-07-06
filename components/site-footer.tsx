@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/whatsapp"
 import { SEDES } from "@/lib/site"
 
@@ -17,6 +18,13 @@ export function SiteFooter() {
               Especialista en gastroenterología y nutrición pediátrica en Aragua, con atención cercana y coordinación
               con especialistas para brindar un enfoque integral a cada familia.
             </p>
+
+            <Link
+              href="/dra-katherine-ainslie"
+              className="mt-4 inline-flex text-sm font-medium text-background/90 underline-offset-4 hover:underline"
+            >
+              Conoce la trayectoria de la Dra. Katherine →
+            </Link>
 
             <div className="mt-6 flex items-center gap-3">
               <a
