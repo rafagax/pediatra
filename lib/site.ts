@@ -55,3 +55,14 @@ export const OPENING_HOURS = {
   abre: "08:00",
   cierra: "16:00",
 }
+
+/**
+ * Redes sociales de la doctora (se muestran bajo su foto en /dra-katherine-ainslie).
+ * ⚠️ AJUSTAR: reemplaza el "#" con el enlace real de cada red.
+ * Deja la cadena vacía ("") en las redes que aún no tenga para ocultarlas.
+ */
+export const SOCIALS = {
+  instagram: "#",
+  facebook: "#",
+  linkedin: "#",
+}
