@@ -148,6 +148,34 @@ const socialLinks = [
   },
 ].filter((s) => s.url && s.url.trim() !== "")
 
+// Renderiza un icono de red: enlace clicable si hay URL real, o marcador atenuado si aún no.
+function renderSocial(s) {
+  const activo = s.url !== "#" && s.url.trim() !== ""
+  const clases =
+    "flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm"
+  const icono = (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+      {s.svg}
+    </svg>
+  )
+  return activo ? (
+    <a
+      key={s.nombre}
+      href={s.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={s.nombre}
+      className={`${clases} transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary hover:text-primary-foreground`}
+    >
+      {icono}
+    </a>
+  ) : (
+    <span key={s.nombre} aria-label={`${s.nombre} (próximamente)`} className={`${clases} opacity-60`}>
+      {icono}
+    </span>
+  )
+}
+
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -185,6 +213,8 @@ const personJsonLd = {
 }
 
 export default function AboutPage() {
+  const linkedinActivo = SOCIALS.linkedin !== "" && SOCIALS.linkedin !== "#"
+
   return (
     <main className="min-h-screen bg-background page-bg text-foreground">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
@@ -225,36 +255,35 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Redes sociales — debajo de la foto (fuera del panel decorativo) */}
-            {socialLinks.length > 0 && (
-              <div className="mx-auto mt-8 flex max-w-sm flex-wrap items-center justify-center gap-3 lg:max-w-md">
-                <span className="w-full text-center text-xs font-medium text-muted-foreground sm:w-auto">Sígueme:</span>
-                {socialLinks.map((s) => {
-                  const activo = s.url !== "#" && s.url.trim() !== ""
-                  const clases =
-                    "flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm"
-                  const icono = (
-                    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
-                      {s.svg}
+            {/* Botón "Ver en LinkedIn" — debajo de la foto */}
+            {SOCIALS.linkedin !== "" && (
+              <div className="mx-auto mt-6 flex max-w-sm justify-center lg:max-w-md">
+                {linkedinActivo ? (
+                  <a
+                    href={SOCIALS.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#0A66C2]" aria-hidden="true">
+                      <path
+                        fill="currentColor"
+                        d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
+                      />
                     </svg>
-                  )
-                  return activo ? (
-                    <a
-                      key={s.nombre}
-                      href={s.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={s.nombre}
-                      className={`${clases} transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary hover:text-primary-foreground`}
-                    >
-                      {icono}
-                    </a>
-                  ) : (
-                    <span key={s.nombre} aria-label={`${s.nombre} (próximamente)`} className={`${clases} opacity-60`}>
-                      {icono}
-                    </span>
-                  )
-                })}
+                    Ver en LinkedIn
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-muted-foreground opacity-70">
+                    <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#0A66C2]" aria-hidden="true">
+                      <path
+                        fill="currentColor"
+                        d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
+                      />
+                    </svg>
+                    Ver en LinkedIn
+                  </span>
+                )}
               </div>
             )}
           </div>
@@ -467,6 +496,19 @@ export default function AboutPage() {
           </ul>
         </div>
       </section>
+
+      {/* ---------- SÍGUEME EN REDES ---------- */}
+      {socialLinks.length > 0 && (
+        <section className="py-14 sm:py-20">
+          <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+            <h2 className="font-serif text-2xl font-medium text-foreground sm:text-3xl">Sígueme en mis redes</h2>
+            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground text-pretty">
+              Consejos de salud digestiva y nutrición infantil para acompañar a tu familia.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-4">{socialLinks.map(renderSocial)}</div>
+          </div>
+        </section>
+      )}
 
       {/* ---------- CTA FINAL ---------- */}
       <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
