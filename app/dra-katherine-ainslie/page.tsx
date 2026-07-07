@@ -497,19 +497,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---------- SÍGUEME EN REDES ---------- */}
-      {socialLinks.length > 0 && (
-        <section className="py-14 sm:py-20">
-          <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-            <h2 className="font-serif text-2xl font-medium text-foreground sm:text-3xl">Sígueme en mis redes</h2>
-            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground text-pretty">
-              Consejos de salud digestiva y nutrición infantil para acompañar a tu familia.
-            </p>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-4">{socialLinks.map(renderSocial)}</div>
-          </div>
-        </section>
-      )}
-
       {/* ---------- CTA FINAL ---------- */}
       <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] bg-foreground px-6 py-14 text-center text-background sm:px-10">
@@ -534,6 +521,19 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* ---------- SÍGUEME EN REDES ---------- */}
+      {socialLinks.length > 0 && (
+        <section className="py-14 sm:py-20">
+          <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+            <h2 className="font-serif text-2xl font-medium text-foreground sm:text-3xl">Sígueme en mis redes</h2>
+            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground text-pretty">
+              Consejos de salud digestiva y nutrición infantil para acompañar a tu familia.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-4">{socialLinks.map(renderSocial)}</div>
+          </div>
+        </section>
+      )}
 
       <SiteFooter />
     </main>
