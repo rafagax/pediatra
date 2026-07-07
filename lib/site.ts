@@ -64,5 +64,6 @@ export const OPENING_HOURS = {
 export const SOCIALS = {
   instagram: "#",
   facebook: "#",
+  tiktok: "#",
   linkedin: "#",
 }

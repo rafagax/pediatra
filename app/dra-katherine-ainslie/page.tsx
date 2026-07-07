@@ -137,6 +137,16 @@ const socialLinks = [
     ),
   },
   {
+    nombre: "TikTok",
+    url: SOCIALS.tiktok,
+    svg: (
+      <path
+        fill="currentColor"
+        d="M12.53 2h3.02c.18 1.62 1.02 3.03 2.46 3.75.6.3 1.28.48 1.99.51v3.02c-1.62-.03-3.14-.5-4.45-1.3v6.25c0 3.19-2.6 5.77-5.8 5.77-3.19 0-5.78-2.58-5.78-5.77 0-3.03 2.33-5.52 5.3-5.76v3.09a2.72 2.72 0 0 0-2.21 2.67 2.72 2.72 0 1 0 5.44.05V2z"
+      />
+    ),
+  },
+  {
     nombre: "LinkedIn",
     url: SOCIALS.linkedin,
     svg: (
@@ -205,7 +215,7 @@ export default function AboutPage() {
                 aria-hidden="true"
                 className="absolute -right-3 -top-3 h-full w-full rounded-[2rem] bg-primary/10 sm:-right-4 sm:-top-4"
               />
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-gradient-to-b from-accent to-muted shadow-xl shadow-primary/15 ring-1 ring-border">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-gradient-to-b from-accent to-muted shadow-lg shadow-primary/10 ring-1 ring-border">
                 <Image
                   src="/images/portada-katherine.jpg"
                   alt="Dra. Katherine Ainslie, gastroenteróloga y nutrióloga pediatra en Aragua"
@@ -226,22 +236,36 @@ export default function AboutPage() {
 
               {/* Redes sociales — debajo de la foto */}
               {socialLinks.length > 0 && (
-                <div className="mt-5 flex items-center justify-center gap-3">
-                  <span className="text-xs font-medium text-muted-foreground">Sígueme:</span>
-                  {socialLinks.map((s) => (
-                    <a
-                      key={s.nombre}
-                      href={s.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={s.nombre}
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary hover:text-primary-foreground"
-                    >
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                  <span className="w-full text-center text-xs font-medium text-muted-foreground sm:w-auto">
+                    Sígueme:
+                  </span>
+                  {socialLinks.map((s) => {
+                    const activo = s.url !== "#" && s.url.trim() !== ""
+                    const clases =
+                      "flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm"
+                    const icono = (
                       <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
                         {s.svg}
                       </svg>
-                    </a>
-                  ))}
+                    )
+                    return activo ? (
+                      <a
+                        key={s.nombre}
+                        href={s.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={s.nombre}
+                        className={`${clases} transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary hover:text-primary-foreground`}
+                      >
+                        {icono}
+                      </a>
+                    ) : (
+                      <span key={s.nombre} aria-label={`${s.nombre} (próximamente)`} className={`${clases} opacity-60`}>
+                        {icono}
+                      </span>
+                    )
+                  })}
                 </div>
               )}
             </div>
