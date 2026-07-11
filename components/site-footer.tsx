@@ -52,7 +52,7 @@ export function SiteFooter() {
                   <br />
                   Cagua, Policlínica Centro
                   <br />
-                  Villa de Cura, Laboratorio Bearne
+                  Villa de Cura, zona centro
                 </span>
               </li>
               <li className="text-background/80">

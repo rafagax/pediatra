@@ -20,7 +20,7 @@ export const faqs = [
   },
   {
     q: "¿Dónde están ubicados?",
-    a: "Atendemos en Maracay (Centro Médico Santa Marta), Turmero (Instituto Policlínico Turmero), Cagua (Policlínica Centro) y Villa de Cura (Laboratorio Bearne). Escríbenos por WhatsApp y te compartimos la ubicación exacta según la sede.",
+    a: "Atendemos en Maracay (Centro Médico Santa Marta), Turmero (Instituto Policlínico Turmero), Cagua (Policlínica Centro) y Villa de Cura (zona centro). Escríbenos por WhatsApp y te compartimos la ubicación exacta según la sede.",
   },
 ]
 

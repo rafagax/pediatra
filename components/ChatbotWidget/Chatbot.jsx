@@ -17,14 +17,18 @@ const knowledgeBase = [
     },
     {
         keywords: ['ubicación', 'ubicacion', 'dónde', 'donde', 'dirección', 'direccion', 'maracay', 'consultorio', 'sede', 'sedes'],
-        response: '📍 Atendemos en varias sedes:\n\n• Maracay → Centro Médico Santa Marta\n• Turmero → Instituto Policlínico Turmero\n• Cagua → Policlínica Centro\n• Villa de Cura → Laboratorio Bearne\n\nEscríbenos por WhatsApp y te confirmamos la dirección exacta según tu zona 😊'
+        response: '📍 Atendemos en varias sedes:\n\n• Maracay → Centro Médico Santa Marta\n• Turmero → Instituto Policlínico Turmero\n• Cagua → Policlínica Centro\n• Villa de Cura → Zona centro\n\nEscríbenos por WhatsApp y te confirmamos la dirección exacta según tu zona 😊'
     },
     {
         keywords: ['whatsapp', 'contacto', 'teléfono', 'telefono', 'llamar', 'número', 'numero', 'mensaje'],
         response: '📱 Puedes contactarnos directamente por WhatsApp:\n\n👉 https://wa.me/584243049579\n\n¡Te respondemos a la brevedad!'
     },
     {
-        keywords: ['cita', 'citas', 'agendar', 'reservar', 'turno', 'horario', 'disponibilidad', 'consulta', 'precio', 'precios', 'costo', 'honorarios', 'cuánto', 'cuanto'],
+        keywords: ['precio', 'precios', 'costo', 'costos', 'cuesta', 'valor', 'honorarios', 'tarifa', 'cuánto', 'cuanto'],
+        response: '💰 El costo de la consulta pediátrica es de 50$.\n\nIncluye la evaluación completa de tu hijo/a y las indicaciones del tratamiento. Para agendar tu cita, escríbenos por WhatsApp:\n\n👉 https://wa.me/584243049579'
+    },
+    {
+        keywords: ['cita', 'citas', 'agendar', 'reservar', 'turno', 'horario', 'disponibilidad', 'consulta'],
         response: '📅 Para agendar tu cita o consultar horarios disponibles, escríbenos directamente por WhatsApp:\n\n👉 https://wa.me/584243049579\n\nIndícanos tu zona (Maracay, Turmero, Cagua o Villa de Cura) y te confirmamos disponibilidad. ¡Es rápido y sencillo!'
     },
     {

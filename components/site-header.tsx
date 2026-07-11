@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "lucide-react"
@@ -23,6 +24,14 @@ export function SiteHeader() {
       <header className="w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/#inicio" className="flex items-center gap-2.5 transition-opacity hover:opacity-85">
+            <Image
+              src="/images/logo-ka.png"
+              alt="Logo de la Dra. Katherine Ainslie"
+              width={494}
+              height={278}
+              priority
+              className="h-9 w-auto flex-none sm:h-11"
+            />
             <span className="flex flex-col leading-tight">
               <span className="font-serif text-lg font-semibold tracking-tight text-foreground">Dra. Katherine Ainslie</span>
               <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">

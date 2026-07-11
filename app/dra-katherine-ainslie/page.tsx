@@ -48,16 +48,16 @@ const trayectoria = [
     periodo: "2012 – 2019",
   },
   {
-    titulo: "Especialista en Puericultura y Pediatría",
-    institucion: "Universidad de Carabobo · Hospital Central de Maracay",
-    detalle: "Postgrado dedicado al cuidado integral y el desarrollo saludable de niños y adolescentes.",
-    periodo: "2019 – 2023",
-  },
-  {
     titulo: "Médico interno de pediatría",
     institucion: "Hospital Militar Cnel. Elbano Paredes Vivas, Aragua",
     detalle: "Experiencia hospitalaria en atención pediátrica (Art. 08 de la Ley del Ejercicio de la Medicina).",
-    periodo: "2020 – 2023",
+    periodo: "2020 – 2021",
+  },
+  {
+    titulo: "Especialista en Puericultura y Pediatría",
+    institucion: "Universidad de Carabobo · Hospital Central de Maracay",
+    detalle: "Postgrado dedicado al cuidado integral y el desarrollo saludable de niños y adolescentes.",
+    periodo: "2021 – 2023",
   },
   {
     titulo: "Subespecialista en Gastroenterología y Nutrición Pediátrica",
@@ -107,10 +107,14 @@ const publicaciones = [
 ]
 
 const sociedades = [
-  { sigla: "SVPP", nombre: "Sociedad Venezolana de Puericultura y Pediatría" },
-  { sigla: "LASPGHAN", nombre: "Soc. Latinoamericana de Gastroenterología, Hepatología y Nutrición Pediátrica" },
-  { sigla: "SOVEGASTRO", nombre: "Sociedad Venezolana de Gastroenterología Pediátrica" },
-  { sigla: "SOVED", nombre: "Sociedad Venezolana de Endoscopia Digestiva" },
+  { sigla: "SVPP", nombre: "Sociedad Venezolana de Puericultura y Pediatría", logo: "/images/logo_svpp.jpg" },
+  {
+    sigla: "LASPGHAN",
+    nombre: "Soc. Latinoamericana de Gastroenterología, Hepatología y Nutrición Pediátrica",
+    logo: "/images/LASPGHAN.png",
+  },
+  { sigla: "SOVEGASTRO", nombre: "Sociedad Venezolana de Gastroenterología Pediátrica", logo: "/images/logo-SVG2.webp" },
+  { sigla: "SOVED", nombre: "Sociedad Venezolana de Endoscopia Digestiva", logo: "/images/soved.jpg" },
 ]
 
 // Iconos de redes en SVG (evitamos depender de iconos de marca de librerías).
@@ -184,7 +188,7 @@ const personJsonLd = {
   alternateName: "Dra. Katherine Ainslie",
   givenName: "Katherine",
   familyName: "Ainslie Montilva",
-  jobTitle: "Gastroenteróloga y Nutrióloga Pediatra",
+  jobTitle: "Pediatra y Gastroenteróloga Infantil",
   gender: "Female",
   nationality: "Venezolana",
   image: `${SITE_URL}/images/portada-katherine.jpg`,
@@ -295,7 +299,7 @@ export default function AboutPage() {
               Dra. Katherine <span className="text-primary">Ainslie</span>
             </h1>
             <p className="mt-4 text-base font-medium uppercase tracking-[0.15em] text-muted-foreground sm:text-lg sm:tracking-[0.2em]">
-              Gastroenteróloga y Nutrióloga Pediatra
+              Pediatra y Gastroenteróloga Infantil
             </p>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty lg:mx-0">
               Cuido la salud digestiva y el bienestar de niños y adolescentes en el estado Aragua, combinando
@@ -487,10 +491,20 @@ export default function AboutPage() {
           <ul className="mt-10 grid gap-4 sm:grid-cols-2">
             {sociedades.map((soc) => (
               <li key={soc.sigla} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5">
-                <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-xs font-bold text-primary">
-                  {soc.sigla}
+                <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-white p-1.5">
+                  <img
+                    src={soc.logo}
+                    alt={`Logo de ${soc.nombre}`}
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    className="h-full w-full object-contain"
+                  />
                 </span>
-                <span className="text-sm leading-relaxed text-foreground">{soc.nombre}</span>
+                <div>
+                  <p className="text-sm font-semibold text-foreground">{soc.sigla}</p>
+                  <p className="text-sm leading-snug text-muted-foreground">{soc.nombre}</p>
+                </div>
               </li>
             ))}
           </ul>

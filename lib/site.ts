@@ -34,7 +34,7 @@ export const SEDES = [
   },
   {
     ciudad: "Villa de Cura",
-    lugar: "Laboratorio Bearne",
+    lugar: "Zona centro",
     region: "Aragua",
     mapQuery: "Villa de Cura, Aragua, Venezuela",
   },
