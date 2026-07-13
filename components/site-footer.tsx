@@ -10,13 +10,20 @@ export function SiteFooter() {
           <div>
             <div className="flex items-center gap-2">
               <div className="leading-tight">
-                <p className="font-serif text-lg font-semibold">Dra. Katherine Ainslie</p>
-                <p className="text-[11px] uppercase tracking-[0.18em] text-background/60">Gastroenterología y Nutrición Pediátrica</p>
+                <p className="font-serif text-lg font-semibold">
+                  Dra. Katherine Ainslie
+                </p>
+
+                <p className="text-[11px] uppercase tracking-[0.18em] text-background/60">
+                  Gastroenterología y Nutrición Pediátrica
+                </p>
               </div>
             </div>
+
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-background/70">
-              Especialista en gastroenterología y nutrición pediátrica en Aragua, con atención cercana y coordinación
-              con especialistas para brindar un enfoque integral a cada familia.
+              Especialista en gastroenterología y nutrición pediátrica en
+              Aragua, con atención cercana y coordinación con especialistas
+              para brindar un enfoque integral a cada familia.
             </p>
 
             <Link
@@ -41,6 +48,7 @@ export function SiteFooter() {
 
           <div>
             <h3 className="font-serif text-base font-semibold">Contacto</h3>
+
             <ul className="mt-4 space-y-4 text-sm">
               <li className="text-background/80">
                 <span>
@@ -55,37 +63,50 @@ export function SiteFooter() {
                   Villa de Cura, zona centro
                 </span>
               </li>
+
               <li className="text-background/80">
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-background">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-background"
+                >
                   {WHATSAPP_DISPLAY}
                 </a>
               </li>
+
               <li className="text-background/80">
-                <span>
-                  Atención: 24/7
-                </span>
+                <span>Atención: 24/7</span>
               </li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-serif text-base font-semibold">Cómo llegar</h3>
+
             <p className="mt-4 text-sm text-background/70">
-              Atendemos en cuatro sedes. Escríbenos por WhatsApp y te enviamos la ubicación exacta de la sede que te
-              corresponde.
+              Atendemos en cuatro sedes. Escríbenos por WhatsApp y te enviamos
+              la ubicación exacta de la sede que te corresponde.
             </p>
+
             <div className="mt-4 grid grid-cols-2 gap-3">
               {SEDES.map((sede) => (
-                <div key={sede.ciudad} className="overflow-hidden rounded-xl border border-background/10">
+                <div
+                  key={sede.ciudad}
+                  className="overflow-hidden rounded-xl border border-background/10"
+                >
                   <iframe
                     title={`Ubicación de la sede en ${sede.ciudad}`}
-                    src={`https://www.google.com/maps?q=${encodeURIComponent(sede.mapQuery)}&output=embed`}
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(
+                      sede.mapQuery
+                    )}&output=embed`}
                     width="100%"
                     height="130"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="block"
                   />
+
                   <p className="bg-background/5 px-2.5 py-1.5 text-[11px] font-medium text-background/80">
                     {sede.ciudad}
                   </p>
@@ -95,9 +116,27 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Dra. Katherine Ainslie · Consulta de Gastroenterología y Nutrición Pediátrica en Aragua. Todos los derechos reservados.</p>
-          <p>Maracay · Turmero · Cagua · Villa de Cura</p>
+        <div className="mt-14 border-t border-background/10 pt-6 text-xs text-background/60">
+          <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+            <p>
+              © {new Date().getFullYear()} Dra. Katherine Ainslie · Consulta de
+              Gastroenterología y Nutrición Pediátrica en Aragua. Todos los
+              derechos reservados.
+            </p>
+
+            <p>Maracay · Turmero · Cagua · Villa de Cura</p>
+          </div>
+
+          <p className="mt-4">
+            Sitio web desarrollado por{" "}
+            <a
+              href="https://webraf.com/"
+              rel="nofollow"
+              className="font-medium text-background/80 underline underline-offset-4 transition-colors hover:text-background"
+            >
+              Webraf
+            </a>
+          </p>
         </div>
       </div>
     </footer>
