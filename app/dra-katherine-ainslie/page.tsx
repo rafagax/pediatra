@@ -153,7 +153,7 @@ const socialLinks = [
 ].filter((s) => s.url && s.url.trim() !== "")
 
 // Renderiza un icono de red: enlace clicable si hay URL real, o marcador atenuado si aún no.
-function renderSocial(s) {
+function renderSocial(s: (typeof socialLinks)[number]) {
   const activo = s.url !== "#" && s.url.trim() !== ""
   const clases =
     "flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm"

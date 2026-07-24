@@ -28,12 +28,12 @@ const testimonials = [
 ]
 
 export function TestimonialsSection() {
-  const scrollRef = useRef(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
   const [isInteracting, setIsInteracting] = useState(false)
 
   // Lógica avanzada de auto-scroll fluido
   useEffect(() => {
-    let animationFrameId
+    let animationFrameId: number
 
     const animateScroll = () => {
       // Si el usuario no está tocando/haciendo hover, movemos el scroll
@@ -60,7 +60,7 @@ export function TestimonialsSection() {
     return () => cancelAnimationFrame(animationFrameId)
   }, [isInteracting])
 
-  const renderCard = (t, idx, isDesktop, setIdx = 0) => (
+  const renderCard = (t: (typeof testimonials)[number], idx: number, isDesktop: boolean, setIdx: number = 0) => (
     <li
       key={`${t.name}-${isDesktop ? 'desktop' : 'mobile'}-${setIdx}-${idx}`}
       className={[

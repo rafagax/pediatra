@@ -56,12 +56,12 @@ const services = [
 ]
 
 export function ServicesSection() {
-  const scrollRef = useRef(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
   const [isInteracting, setIsInteracting] = useState(false)
 
   // Lógica avanzada de auto-scroll fluido
   useEffect(() => {
-    let animationFrameId
+    let animationFrameId: number
 
     const animateScroll = () => {
       if (scrollRef.current && !isInteracting) {
@@ -84,7 +84,7 @@ export function ServicesSection() {
   }, [isInteracting])
 
   // Extraemos la tarjeta a una función para no repetir código entre el carrusel y el grid
-  const renderCard = (service, idx, isDesktop) => {
+  const renderCard = (service: (typeof services)[number], idx: number, isDesktop: boolean) => {
     const isFeatured = service.featured
     return (
       <li
