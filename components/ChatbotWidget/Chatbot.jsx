@@ -25,7 +25,7 @@ const knowledgeBase = [
     },
     {
         keywords: ['precio', 'precios', 'costo', 'costos', 'cuesta', 'valor', 'honorarios', 'tarifa', 'cuánto', 'cuanto'],
-        response: '💰 El costo de la consulta pediátrica es de 50$.\n\nIncluye la evaluación completa de tu hijo/a y las indicaciones del tratamiento. Para agendar tu cita, escríbenos por WhatsApp:\n\n👉 https://wa.me/584243049579'
+        response: '💰 El costo de la consulta pediátrica podras conocerlo escribiendo directamente a la doctora para consultar \n\nIncluye la evaluación completa de tu hijo/a y las indicaciones del tratamiento. Para agendar tu cita, escríbenos por WhatsApp:\n\n👉 https://wa.me/584243049579'
     },
     {
         keywords: ['cita', 'citas', 'agendar', 'reservar', 'turno', 'horario', 'disponibilidad', 'consulta'],
