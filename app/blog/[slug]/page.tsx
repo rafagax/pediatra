@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, CalendarDays, MessageCircle, Stethoscope } from "lucide-react"
 import { notFound } from "next/navigation"
-import { BLOG_POSTS, getBlogPost, getPostWhatsAppUrl, getRelatedPosts } from "@/lib/blog-posts"
+import { BLOG_POSTS, getBlogPost, getPostWhatsAppUrl, getRelatedPosts, isBlogPostPublished } from "@/lib/blog-posts"
 import { SITE_URL } from "@/lib/site"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   if (!post) return {}
 
   const url = `${SITE_URL}/blog/${post.slug}`
+  const isPublished = isBlogPostPublished(post)
 
   return {
     title: post.seoTitle,
@@ -49,6 +50,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       description: post.description,
       images: [post.image],
     },
+    ...(!isPublished && { robots: { index: false, follow: false } }),
   }
 }
 
@@ -62,6 +64,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) notFound()
 
   const postUrl = `${SITE_URL}/blog/${post.slug}`
+  const isPublished = isBlogPostPublished(post)
   const relatedPosts = getRelatedPosts(post.slug)
   const whatsappUrl = getPostWhatsAppUrl(post.topic)
 
@@ -138,10 +141,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <Image src="/images/doctora-1.png" alt="Dra. Katherine Ainslie" fill sizes="48px" className="object-cover object-[45%_28%]" />
               </Link>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Por <Link href="/dra-katherine-ainslie" className="font-semibold text-foreground hover:text-primary">Dra. Katherine Ainslie</Link>
+                Redactado por <Link href="/dra-katherine-ainslie" className="font-semibold text-foreground hover:text-primary">Dra. Katherine Ainslie</Link>
                 {" · "}Gastroenteróloga y Nutrióloga Pediatra{" · "}
-                Publicado <time dateTime={post.datePublished}>{post.displayDate}</time>{" · "}
-                Revisado <time dateTime={post.dateModified}>{post.displayDate}</time>
+                {isPublished ? (
+                  <>
+                    Publicado <time dateTime={post.datePublished}>{post.displayDate}</time>{" · "}
+                    Revisado <time dateTime={post.dateModified}>{post.displayDate}</time>
+                  </>
+                ) : (
+                  <>Programado para <time dateTime={post.datePublished}>{post.displayDate}</time></>
+                )}
               </p>
             </div>
           </div>

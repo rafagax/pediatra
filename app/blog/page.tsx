@@ -2,11 +2,12 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, BookOpen } from "lucide-react"
-import { BLOG_POSTS } from "@/lib/blog-posts"
+import { BLOG_POSTS, isBlogPostPublished } from "@/lib/blog-posts"
 import { SITE_URL } from "@/lib/site"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
+import { BlogVideoSection } from "@/components/blog-video-section"
 
 export const metadata: Metadata = {
   title: "Blog de salud digestiva infantil | Dra. Katherine Ainslie",
@@ -62,6 +63,8 @@ export default function BlogPage() {
         </div>
       </section>
 
+      <BlogVideoSection />
+
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid gap-7 md:grid-cols-2">
           {BLOG_POSTS.map((post, index) => (
@@ -79,12 +82,13 @@ export default function BlogPage() {
                 </div>
                 <div className="p-6 sm:p-8">
                   <time dateTime={post.datePublished} className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                    {post.displayDate}
+                    {isBlogPostPublished(post) ? post.displayDate : `Próxima publicación · ${post.displayDate}`}
                   </time>
                   <h2 className="mt-3 font-serif text-2xl font-medium leading-snug text-foreground transition-colors group-hover:text-primary">
                     {post.title}
                   </h2>
                   <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{post.excerpt}</p>
+                  <p className="mt-4 text-xs font-medium text-foreground/75">Redactado por la Dra. Katherine Ainslie</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                     Leer artículo <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </span>

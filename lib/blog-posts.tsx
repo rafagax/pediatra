@@ -44,9 +44,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageAlt: "Bebé recostado sobre el hombro de su madre después de comer",
     topic: "reflujo",
     condition: "Reflujo gastroesofágico",
-    datePublished: "2026-09-08",
-    dateModified: "2026-09-08",
-    displayDate: "8 de septiembre de 2026",
+    datePublished: "2026-08-08",
+    dateModified: "2026-08-08",
+    displayDate: "8 de agosto de 2026",
     body: (
       <>
         <p>
@@ -167,9 +167,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageAlt: "Niño pequeño sentado en el inodoro con apoyo para los pies",
     topic: "estreñimiento",
     condition: "Estreñimiento infantil",
-    datePublished: "2026-09-08",
-    dateModified: "2026-09-08",
-    displayDate: "8 de septiembre de 2026",
+    datePublished: "2026-08-23",
+    dateModified: "2026-08-23",
+    displayDate: "23 de agosto de 2026",
     body: (
       <>
         <p>
@@ -286,9 +286,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageAlt: "Niña de edad escolar con las manos sobre el abdomen",
     topic: "dolor abdominal",
     condition: "Dolor abdominal recurrente",
-    datePublished: "2026-09-08",
-    dateModified: "2026-09-08",
-    displayDate: "8 de septiembre de 2026",
+    datePublished: "2026-09-07",
+    dateModified: "2026-09-07",
+    displayDate: "7 de septiembre de 2026",
     body: (
       <>
         <p>
@@ -409,9 +409,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageAlt: "Madre amamantando a su bebé",
     topic: "alergia a la leche",
     condition: "Alergia a la proteína de leche de vaca",
-    datePublished: "2026-09-08",
-    dateModified: "2026-09-08",
-    displayDate: "8 de septiembre de 2026",
+    datePublished: "2026-09-22",
+    dateModified: "2026-09-22",
+    displayDate: "22 de septiembre de 2026",
     body: (
       <>
         <p>
@@ -529,6 +529,11 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export function getBlogPost(slug: string) {
   return BLOG_POSTS.find((post) => post.slug === slug)
+}
+
+export function isBlogPostPublished(post: BlogPost, now = new Date()) {
+  const publicationDate = new Date(`${post.datePublished}T00:00:00-04:00`)
+  return publicationDate.getTime() <= now.getTime()
 }
 
 export function getRelatedPosts(slug: string) {

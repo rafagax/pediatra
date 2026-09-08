@@ -66,3 +66,10 @@ export const SOCIALS = {
   facebook: "#",
   linkedin: "#",
 }
+
+/**
+ * Video general del blog. Acepta una URL de YouTube o una ruta local a un MP4
+ * dentro de /public (por ejemplo: /videos/consejos-dra-katherine.mp4).
+ * Mientras esté vacío, la sección no se muestra.
+ */
+export const BLOG_VIDEO_URL = process.env.BLOG_VIDEO_URL?.trim() ?? ""

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 import { SITE_URL } from "@/lib/site"
-import { BLOG_POSTS } from "@/lib/blog-posts"
+import { BLOG_POSTS, isBlogPostPublished } from "@/lib/blog-posts"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    ...BLOG_POSTS.map((post) => ({
+    ...BLOG_POSTS.filter((post) => isBlogPostPublished(post)).map((post) => ({
       url: `${SITE_URL}/blog/${post.slug}`,
       lastModified: new Date(post.dateModified),
       changeFrequency: "monthly" as const,
