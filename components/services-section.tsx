@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useState, useEffect } from "react"
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { WHATSAPP_URL } from "@/lib/whatsapp"
 
@@ -16,24 +17,28 @@ const services = [
     description: "Diagnóstico preciso y tratamiento avanzado para episodios de reflujo y acidez en niños.",
     tag: "Gastroenterología",
     featured: false,
+    href: "/blog/reflujo-en-bebes",
   },
   {
     title: "Manejo del Estreñimiento",
     description: "Evaluación detallada y plan de manejo efectivo del estreñimiento infantil.",
     tag: "Gastroenterología",
     featured: false,
+    href: "/blog/estrenimiento-en-ninos",
   },
   {
     title: "Dolor Abdominal",
     description: "Evaluación exhaustiva para determinar y tratar las causas del dolor abdominal recurrente.",
     tag: "Patologías Digestivas",
     featured: false,
+    href: "/blog/dolor-abdominal-en-ninos",
   },
   {
     title: "Alergias e Intolerancias",
     description: "Detección y abordaje de alergias alimentarias y enfermedad celíaca con enfoque nutricional.",
     tag: "Nutrición Pediátrica",
     featured: false,
+    href: "/blog/alergia-proteina-leche-de-vaca",
   },
   {
     title: "Control de H. Pylori",
@@ -97,6 +102,15 @@ export function ServicesSection() {
             : "border-border bg-card hover:border-[#0A192F]/40 hover:bg-[#0A192F] hover:shadow-xl hover:shadow-[#0A192F]/20 hover:-translate-y-1",
         ].join(" ")}
       >
+        {service.href && (
+          <Link
+            href={service.href}
+            aria-label={`Leer artículo: ${service.title}`}
+            className="absolute inset-0 z-10 rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            <span className="sr-only">Leer artículo sobre {service.title}</span>
+          </Link>
+        )}
         <span
           aria-hidden="true"
           className={[

@@ -53,6 +53,9 @@ export function SiteHeader() {
             >
               La Doctora
             </Link>
+            <Link href="/blog" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              Blog
+            </Link>
             <a href="/#testimonios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Pacientes
             </a>
@@ -70,11 +73,12 @@ export function SiteHeader() {
         </div>
 
         <nav aria-label="Navegación móvil" className="border-t border-border/60 md:hidden">
-          <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2 text-xs sm:px-6">
+          <div className="mx-auto grid max-w-6xl grid-cols-3 items-center gap-x-3 gap-y-1 px-4 py-2 text-center text-xs sm:px-6">
             <a href="/#servicios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Servicios</a>
             <a href="/#proceso" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Proceso</a>
             <Link href="/dra-katherine-ainslie" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">La Doctora</Link>
-            <a href="/#testimonios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Reseñas</a>
+            <Link href="/blog" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Blog</Link>
+            <a href="/#testimonios" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Pacientes</a>
             <a href="/#contacto" className="py-1.5 text-muted-foreground transition-colors hover:text-foreground">Contacto</a>
           </div>
         </nav>

@@ -157,3 +157,95 @@
 .soft-card:hover {
   transform: translateY(-6px);
 }
+
+/* Lectura larga del blog: ritmo editorial sin depender de un plugin externo. */
+.article-prose {
+  color: var(--color-foreground);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.article-prose > * + * {
+  margin-top: 1.25rem;
+}
+
+.article-prose h2 {
+  margin-top: 3rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-foreground);
+}
+
+.article-prose h3 {
+  margin-top: 2rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 550;
+  line-height: 1.3;
+  color: var(--color-foreground);
+}
+
+.article-prose ul,
+.article-prose ol {
+  padding-left: 1.35rem;
+}
+
+.article-prose ul {
+  list-style: disc;
+}
+
+.article-prose ol {
+  list-style: decimal;
+}
+
+.article-prose li {
+  padding-left: 0.3rem;
+}
+
+.article-prose li + li {
+  margin-top: 0.65rem;
+}
+
+.article-prose strong {
+  color: var(--color-foreground);
+  font-weight: 650;
+}
+
+.article-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-card);
+}
+
+.article-prose table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.article-prose th,
+.article-prose td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.article-prose th {
+  background: var(--color-secondary);
+  font-weight: 650;
+}
+
+.article-prose tr:last-child td {
+  border-bottom: 0;
+}
+
+.article-callout .article-prose h2,
+.article-callout .article-prose h3 {
+  margin-top: 1.5rem;
+}
