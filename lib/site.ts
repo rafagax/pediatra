@@ -62,9 +62,9 @@ export const OPENING_HOURS = {
  * Deja la cadena vacía ("") en las redes que aún no tenga para ocultarlas.
  */
 export const SOCIALS = {
-  instagram: "#",
-  facebook: "#",
-  linkedin: "#",
+  instagram: "https://www.instagram.com/dra_gastropedia?stkn=cm1ya3hnN2k0aGx3",
+  facebook: "",
+  linkedin: "",
 }
 
 /**
