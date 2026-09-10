@@ -10,12 +10,12 @@ import { ArrowRight, CheckCircle2, ExternalLink, GraduationCap, Award, BookOpen 
 const PAGE_PATH = "/dra-katherine-ainslie"
 
 export const metadata: Metadata = {
-  title: "Sobre la Dra. Katherine Ainslie | Gastroenteróloga y Nutrióloga Pediatra",
+  title: "Sobre la Dra. Katherine Ainslie | Pediatra y Gastroenterólogo Infantil",
   description:
     "Conoce a la Dra. Katherine Ainslie: médico especialista en Puericultura y Pediatría con subespecialidad en Gastroenterología y Nutrición Pediátrica (UCV). Formación, experiencia hospitalaria, publicaciones científicas y sociedades médicas en Aragua, Venezuela.",
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Sobre la Dra. Katherine Ainslie | Gastroenteróloga y Nutrióloga Pediatra",
+    title: "Sobre la Dra. Katherine Ainslie | Pediatra y Gastroenterólogo Infantil",
     description:
       "Médico especialista en Puericultura y Pediatría con subespecialidad en Gastroenterología y Nutrición Pediátrica. Trayectoria, publicaciones y sociedades científicas.",
     url: `${SITE_URL}${PAGE_PATH}`,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: "/images/portada-katherine.jpg",
         width: 1200,
         height: 630,
-        alt: "Dra. Katherine Ainslie, gastroenteróloga y nutrióloga pediatra",
+        alt: "Dra. Katherine Ainslie, especialista en gastroenterología y nutrición pediátrica",
       },
     ],
   },
@@ -188,7 +188,7 @@ const personJsonLd = {
   alternateName: "Dra. Katherine Ainslie",
   givenName: "Katherine",
   familyName: "Ainslie Montilva",
-  jobTitle: "Pediatra y Gastroenteróloga Infantil",
+  jobTitle: "Pediatra y Gastroenterólogo Infantil",
   gender: "Female",
   nationality: "Venezolana",
   image: `${SITE_URL}/images/portada-katherine.jpg`,
@@ -242,7 +242,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-gradient-to-b from-accent to-muted ring-1 ring-border">
                 <Image
                   src="/images/portada-katherine.jpg"
-                  alt="Dra. Katherine Ainslie, gastroenteróloga y nutrióloga pediatra en Aragua"
+                  alt="Dra. Katherine Ainslie, especialista en gastroenterología y nutrición pediátrica en Aragua"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -299,7 +299,7 @@ export default function AboutPage() {
               Dra. Katherine <span className="text-primary">Ainslie</span>
             </h1>
             <p className="mt-4 text-base font-medium uppercase tracking-[0.15em] text-muted-foreground sm:text-lg sm:tracking-[0.2em]">
-              Pediatra y Gastroenteróloga Infantil
+              Pediatra y Gastroenterólogo Infantil
             </p>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty lg:mx-0">
               Cuido la salud digestiva y el bienestar de niños y adolescentes en el estado Aragua, combinando

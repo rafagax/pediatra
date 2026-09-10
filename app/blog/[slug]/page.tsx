@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     author: {
       "@type": "Person",
       name: "Dra. Katherine Ainslie",
-      jobTitle: "Gastroenteróloga y Nutrióloga Pediatra",
+      jobTitle: "Pediatra y Gastroenterólogo Infantil",
       url: `${SITE_URL}/dra-katherine-ainslie`,
     },
     reviewedBy: { "@type": "Person", name: "Dra. Katherine Ainslie" },
@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </Link>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Redactado por <Link href="/dra-katherine-ainslie" className="font-semibold text-foreground hover:text-primary">Dra. Katherine Ainslie</Link>
-                {" · "}Gastroenteróloga y Nutrióloga Pediatra{" · "}
+                {" · "}Pediatra y Gastroenterólogo Infantil{" · "}
                 {isPublished ? (
                   <>
                     Publicado <time dateTime={post.datePublished}>{post.displayDate}</time>{" · "}
@@ -206,7 +206,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Sobre la autora</p>
               <h2 className="mt-1 font-serif text-2xl font-medium">Dra. Katherine Ainslie</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Pediatra y gastroenteróloga infantil.<br />Especialista en Gastroenterología y Nutrición Pediátrica.
+                Pediatra y Gastroenterólogo Infantil.<br />Especialista en Gastroenterología y Nutrición Pediátrica.
               </p>
               <Link href="/dra-katherine-ainslie" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
                 Conoce su trayectoria <ArrowRight className="h-4 w-4" aria-hidden="true" />

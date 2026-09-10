@@ -27,7 +27,7 @@ export function CtaBand() {
                 Cupos disponibles esta semana
               </span>
               <h2 className="mt-5 font-serif text-3xl font-medium leading-[1.1] tracking-tight text-background text-balance sm:text-[2.75rem]">
-                Agenda la cita con la gastroenteróloga pediatra de tu hijo hoy{" "}
+                Agenda la cita con la especialista en gastroenterología pediátrica de tu hijo hoy{" "}
                 <span className="text-accent">por WhatsApp en minutos.</span>
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-background/75 text-pretty">

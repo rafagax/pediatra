@@ -37,7 +37,7 @@ export const BLOG_POSTS: BlogPost[] = [
     seoTitle: "Reflujo en bebés: ¿cuándo es normal? | Dra. Ainslie",
     title: "Reflujo en bebés: cuándo es normal y cuándo preocuparse",
     description:
-      "¿Tu bebé regurgita mucho? Una gastroenteróloga pediatra de Maracay explica cuándo el reflujo en bebés es normal, cuándo preocuparse y cómo se trata.",
+      "¿Tu bebé regurgita mucho? Una especialista en gastroenterología pediátrica de Maracay explica cuándo el reflujo en bebés es normal, cuándo preocuparse y cómo se trata.",
     excerpt:
       "Aprende a distinguir el reflujo fisiológico de las señales que necesitan evaluación médica y conoce qué puedes hacer en casa.",
     image: "/images/blog/reflujo-en-bebes-maracay.webp",
@@ -160,7 +160,7 @@ export const BLOG_POSTS: BlogPost[] = [
     seoTitle: "Estreñimiento en niños: causas y qué hacer | Dra. Ainslie",
     title: "Estreñimiento en niños: causas, qué hacer en casa y cuándo consultar",
     description:
-      "Tu hijo no va al baño o le duele al evacuar. Una gastroenteróloga pediatra explica las causas del estreñimiento infantil, qué hacer en casa y cuándo consultar.",
+      "Tu hijo no va al baño o le duele al evacuar. Una especialista en gastroenterología pediátrica explica las causas del estreñimiento infantil, qué hacer en casa y cuándo consultar.",
     excerpt:
       "Conoce las causas más frecuentes, las rutinas que ayudan y las señales que indican cuándo acudir al especialista.",
     image: "/images/blog/estrenimiento-en-ninos-maracay.webp",
@@ -246,7 +246,7 @@ export const BLOG_POSTS: BlogPost[] = [
           mantener las heces blandas durante varios meses para que el niño pierda el miedo a evacuar, y reeducar el
           hábito. Suele necesitar más tiempo del que los padres esperan, con frecuencia entre 6 y 12 meses, y suspender
           el tratamiento demasiado pronto es la causa más común de recaída. Una{" "}
-          <ArticleLink href="/">gastroenteróloga pediatra en Maracay</ArticleLink> puede orientar un plan individual.
+          <ArticleLink href="/">gastroenterólogo pediatra en Maracay</ArticleLink> puede orientar un plan individual.
         </p>
       </>
     ),
@@ -293,7 +293,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <>
         <p>
           &ldquo;Me duele la barriga&rdquo; es una frase que casi todos los niños dicen alguna vez. El problema es cuando se
-          repite semana tras semana, hace que falte al colegio o lo despierta en la noche. Como gastroenteróloga pediatra,
+          repite semana tras semana, hace que falte al colegio o lo despierta en la noche. Como especialista en gastroenterología pediátrica,
           veo muchos niños de Maracay y sus alrededores con dolor abdominal recurrente, y la mayoría de los padres llegan
           con la misma pregunta: ¿es algo grave?
         </p>
@@ -402,7 +402,7 @@ export const BLOG_POSTS: BlogPost[] = [
     seoTitle: "Alergia a la proteína de leche de vaca en bebés | Dra. Ainslie",
     title: "Alergia a la proteína de leche de vaca en bebés: síntomas y diagnóstico",
     description:
-      "Síntomas de la alergia a la proteína de leche de vaca (APLV) en bebés, cómo se diagnostica correctamente y qué hacer si toma pecho o fórmula. Por gastroenteróloga pediatra.",
+      "Síntomas de la alergia a la proteína de leche de vaca (APLV) en bebés, cómo se diagnostica correctamente y qué hacer si toma pecho o fórmula. Por la Dra. Katherine Ainslie.",
     excerpt:
       "Descubre cómo reconocer la APLV, en qué se diferencia de la intolerancia a la lactosa y cómo se confirma el diagnóstico.",
     image: "/images/blog/alergia-proteina-leche-de-vaca-bebes.webp",

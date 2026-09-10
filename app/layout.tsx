@@ -31,6 +31,8 @@ export const metadata: Metadata = {
   keywords: [
     "pediatra en maracay",
     "gastroenterologo pediatra en maracay",
+    "gastroenterólogo infantil",
+    "gastroenterólogo pediatra",
     "gastropediatra maracay",
     "consulta pediatrica maracay",
     "pediatra infantil aragua",
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
         url: "/images/portada-katherine.jpg",
         width: 1200,
         height: 630,
-        alt: "Dra. Katherine Ainslie - Gastroenteróloga y Nutrióloga Pediatra",
+        alt: "Dra. Katherine Ainslie - Pediatra y Gastroenterólogo Infantil",
       },
     ],
     locale: "es_VE",
